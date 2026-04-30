@@ -13,7 +13,28 @@
     {
       "name": "game-marketing-skills",
       "description": "Mobile game marketing skills for App Store & Google Play: UA campaigns, ASO, launch strategy, monetization, live ops, targeting, and player retention. Built for mobile game studios and indie developers.",
-      "source": "./"
+      "source": "./",
+      "skills": [
+        "./skills/ab-test-setup",
+        "./skills/ad-creative",
+        "./skills/analytics-tracking",
+        "./skills/aso-audit",
+        "./skills/churn-prevention",
+        "./skills/community-marketing",
+        "./skills/content-strategy",
+        "./skills/customer-research",
+        "./skills/game-marketing-context",
+        "./skills/image",
+        "./skills/launch-strategy",
+        "./skills/marketing-ideas",
+        "./skills/marketing-psychology",
+        "./skills/paid-ads",
+        "./skills/paywall-upgrade-cro",
+        "./skills/pricing-strategy",
+        "./skills/product-marketing-context",
+        "./skills/referral-program",
+        "./skills/social-content"
+      ]
     }
   ]
 }
