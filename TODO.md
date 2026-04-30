@@ -49,7 +49,7 @@ Issues found during eval that must be addressed:
 | 13 | `social-content` | ⏳ Pending — TikTok gaming, YouTube Shorts, Discord |
 | 14 | `community-marketing` | ⏳ Pending — Discord strategy, Reddit gaming, creator seeding |
 
-### Phase 4 — Archive SaaS-Only Skills
+### Phase 4 — Archive SaaS-Only Skills ✅
 | Skills moved to `skills/legacy-saas` | Status |
 |--------------------------------------|--------|
 | `cold-email`, `revops`, `sales-enablement`, `competitor-alternatives`, `directory-submissions`, `programmatic-seo`, `schema-markup`, `site-architecture`, `lead-magnets`, `free-tool-strategy`, `video`, `form-cro`, `popup-cro`, `signup-flow-cro`, `onboarding-cro`, `page-cro`, `copywriting`, `copy-editing`, `email-sequence`, `ai-seo`, `seo-audit`, `competitor-profiling` | ✅ Moved |

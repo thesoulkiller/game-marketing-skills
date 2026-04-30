@@ -22,33 +22,42 @@ Skills are markdown files that give AI agents specialized knowledge and workflow
 
 ## How Skills Work Together
 
-The repository now has a focused active skill set plus an archive:
+The repo has a focused set of active skills and a reference archive:
 
-- Active skills live in `skills/`
-- SaaS-only archived/reference skills live in `skills/legacy-saas/`
-- `game-marketing-context` is the active foundation skill for this repo
+- Active skills live in `skills/` — these are ready to use
+- SaaS-only reference skills are archived in `skills/legacy-saas/` — not active, kept for structural reference only
+- `game-marketing-context` is the foundation — run it first on any new game before using other skills
 
 ```text
-               Active Skills
-      ┌───────────────────────────────┐
-      │     game-marketing-context    │
-      │        (foundation skill)     │
-      └───────────────┬───────────────┘
-                      │
-                      ▼
-      ┌───────────────────────────────┐
-      │  skills/legacy-saas/* archive │
-      │  (reference guidance only)    │
-      └───────────────────────────────┘
-
-
-
-Skills reference each other and build on shared context. The `product-marketing-context` skill is the foundation — every other skill checks it first to understand your product, audience, and positioning before doing anything.
-
-See each skill's **Related Skills** section for the full dependency map.
+      ┌──────────────────────────────────────┐
+      │         game-marketing-context       │
+      │   (run first — sets game context)    │
+      └──────────────┬───────────────────────┘
+                     │
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+  ┌──────────┐ ┌──────────┐ ┌──────────┐
+  │  UA &    │ │ Content  │ │ Strategy │
+  │ Paid Ads │ │& Commnty │ │& Monetiz.│
+  ├──────────┤ ├──────────┤ ├──────────┤
+  │paid-ads  │ │social-   │ │pricing-  │
+  │ad-creatv │ │ content  │ │ strategy │
+  │analytics │ │community │ │launch-   │
+  │ab-test   │ │image     │ │ strategy │
+  │aso-audit │ │content-  │ │marketing-│
+  │          │ │ strategy │ │ psych    │
+  └──────────┘ └──────────┘ └──────────┘
+        │            │            │
+        └────────────┴────────────┘
+                     │
+                     ▼
+      ┌──────────────────────────────────────┐
+      │      skills/legacy-saas/*            │
+      │  (reference only — not active)       │
+      └──────────────────────────────────────┘
 ```
 
-As active skills are reintroduced, this map and dependency notes will be expanded.
+As new game-specific skills are built (Phase 2 roadmap: `game-launch`, `ua-strategy`, `player-targeting`, `store-creative`, `live-ops`), this map will expand.
 
 ## Available Skills
 
@@ -149,87 +158,95 @@ npx skillkit install thesoulkiller/game-marketing-skills --skill game-marketing-
 npx skillkit install thesoulkiller/game-marketing-skills --list
 ```
 
-## Upgrading from v1.0
-
-Skills now use `.agents/` instead of `.claude/` for the product marketing context file. Move your existing context file:
-
-```bash
-mkdir -p .agents
-mv .claude/product-marketing-context.md .agents/product-marketing-context.md
-```
-
-Skills will still check `.claude/` as a fallback, so nothing breaks if you don't.
-
 ## Usage
 
-Once installed, just ask your agent to help with marketing tasks:
+**Step 1 — always start here:**
 
 ```
-"Help me optimize this landing page for conversions"
-→ Uses paywall-upgrade-cro skill
+"Set up my game marketing context for [Game Name]"
+→ Uses game-marketing-context skill — creates .agents/game-marketing-context.md
+   All other skills read this file automatically for game/genre/audience context.
+```
 
-"Write homepage copy for my SaaS"
-→ Uses game-marketing-context skill
+**Then use any skill for your task:**
 
-"Set up GA4 tracking for signups"
+```
+"Audit my App Store listing and suggest improvements"
+→ Uses aso-audit skill
+
+"Plan a soft launch campaign for my tactical RPG"
+→ Uses launch-strategy skill
+
+"Set up Firebase Analytics tracking for D1, D7, D30 retention"
 → Uses analytics-tracking skill
 
-"Create a 5-email welcome sequence"
+"Write 10 Facebook ad headline variations for my game"
+→ Uses ad-creative skill
+
+"Design an A/B test for my paywall placement"
+→ Uses ab-test-setup + paywall-upgrade-cro skills
+
+"Build a TikTok content calendar for my game launch"
 → Uses social-content skill
+
+"Analyze why players are churning at day 3"
+→ Uses churn-prevention + customer-research skills
 ```
 
-You can also invoke skills directly:
+**Direct skill invocation:**
 
 ```
 /game-marketing-context
-/analytics-tracking
+/aso-audit
 /paid-ads
+/launch-strategy
+/analytics-tracking
 ```
 
 ## Skill Categories
 
-### Conversion & Monetization
+### Foundation ← Start Here
 
-- `paywall-upgrade-cro` - In-app upgrade moments
+- `game-marketing-context` - Set up your game's context file; all other skills read it automatically
+- `product-marketing-context` - General product context setup (useful alongside game context)
+- `customer-research` - Player research synthesis, interviews, and behavioral insights
 
-### Content & Community
+### App Store & Discovery
 
-- `social-content` - Social media content
-- `image` - AI image generation, design tools, and optimization
-- `community-marketing` - Community growth and engagement
-- `content-strategy` - Content planning and roadmap
+- `aso-audit` - App Store & Google Play listing audit, keyword optimization, screenshots, ratings
+- `marketing-ideas` - Growth and discovery ideas specific to your game genre and stage
 
-### Discovery & Growth
+### Paid User Acquisition
 
-- `aso-audit` - App Store / Google Play optimization
-- `marketing-ideas` - Growth ideas and experiments
-- `referral-program` - Referral and affiliate programs
-
-### Paid & Distribution
-
-- `paid-ads` - Google, Meta, LinkedIn ad campaigns
-- `ad-creative` - Bulk ad creative generation and iteration
+- `paid-ads` - Meta, Google UAC, TikTok, Apple Search Ads campaign strategy
+- `ad-creative` - Gameplay video concepts, playables, creatives, and ad copy at scale
 
 ### Measurement & Testing
 
-- `analytics-tracking` - Event tracking setup
-- `ab-test-setup` - Experiment design
+- `analytics-tracking` - D1/D7/D30 retention, ARPPU, ARPDAU, LTV event setup
+- `ab-test-setup` - A/B experiment design for paywalls, onboarding, creatives
 
-### Retention
+### Monetization
 
-- `churn-prevention` - Cancel flows, save offers, dunning, payment recovery
+- `paywall-upgrade-cro` - IAP screens, starter packs, whale funnels, and in-app upgrade moments
+- `pricing-strategy` - IAP pricing, battle pass design, subscription models
 
-### Strategy & Monetization
+### Retention & Community
 
-- `marketing-psychology` - Mental models and psychology
-- `launch-strategy` - Product launches and announcements
-- `pricing-strategy` - Pricing, packaging, and monetization
+- `churn-prevention` - Lapsed player reactivation, save flows, win-back campaigns
+- `community-marketing` - Discord, Reddit, creator seeding, and player community growth
+- `referral-program` - Friend referral mechanics and affiliate programs
 
-### Foundation
+### Content & Social
 
-- `game-marketing-context` - Core game context for all marketing work
-- `product-marketing-context` - Product context setup and updates
-- `customer-research` - Research synthesis and insights
+- `social-content` - TikTok gaming, YouTube Shorts, Discord, content calendars
+- `image` - Store creative, ad visuals, and social media graphics
+- `content-strategy` - Content planning, organic growth, and editorial roadmap
+
+### Launch & Strategy
+
+- `launch-strategy` - Soft launch, global launch, and live update release planning
+- `marketing-psychology` - Behavioral economics, player motivation, and persuasion frameworks
 
 ## Contributing
 
