@@ -1,0 +1,46 @@
+{
+  "run_id": "eval-3-with_skill",
+  "expectations": [
+    {
+      "text": "Reads existing context file before making changes (updated file differs from existing file)",
+      "passed": true,
+      "evidence": "The updated file clearly differs from the existing file (date updated from 2026-03-15 to 2026-04-30, CPI actuals filled in, D7 retention filled in, age range revised, new subsections added). eval_notes.txt confirms Step 1 was 'Checked for existing context — file existed, read and summarized it.'"
+    },
+    {
+      "text": "Updates CPI actuals: US $1.80 and Germany $0.95 with source noted",
+      "passed": true,
+      "evidence": "Performance Targets table updated: CPI (Tier 1, US) Current = '$1.80 (Meta — see note)'; CPI (Tier 2, DE) Current = '$0.95 (Meta — on target)'. Both values present with 'Meta' as the data source."
+    },
+    {
+      "text": "D7 retention actual (18%) is compared against the genre benchmark floor (e.g., ~12% for mid-core), not just flagged as 'below target'",
+      "passed": true,
+      "evidence": "UA Campaign Data Notes section states: 'The mid-core genre floor is approximately 12% — so 18% is above the critical threshold and not an emergency.' The 18% actual is explicitly benchmarked against the ~12% genre floor rather than simply flagged as below the 22% internal target."
+    },
+    {
+      "text": "US CPI $1.80 is evaluated against genre-appropriate CPI benchmark range (acceptable for mid-core $1.50–4.00; above range for casual $1.00–2.50)",
+      "passed": true,
+      "evidence": "UA Campaign Data Notes section states: '$1.80 is within the mid-core Tier 1 benchmark range of $1.50–$4.00. This is not alarming — it reflects healthy competitive demand for this audience.' The mid-core genre benchmark range is correctly applied. The casual range comparison ($1.00–2.50) is not explicitly mentioned, but the mid-core genre-appropriate range is correctly cited and the evaluation is accurate."
+    },
+    {
+      "text": "Target player age range updated to 25-40 with data source noted",
+      "passed": true,
+      "evidence": "Target Player section updated to: 'Primary age range: 25–40 *(updated from 18–35 based on first UA campaign data — actual audience skews older and more male than originally estimated)*'. Data source ('first UA campaign data') is explicitly noted inline."
+    },
+    {
+      "text": "Unrelated sections (monetization, store presence, brand voice) are not rewritten",
+      "passed": true,
+      "evidence": "Comparing both files: Monetization Model section is identical, Store Presence section is identical, and Brand Voice & Tone section is identical. Only Target Player, Performance Targets & Metrics, and UA & Channel Strategy sections were modified."
+    },
+    {
+      "text": "Summary of changes is provided",
+      "passed": true,
+      "evidence": "eval_notes.txt contains a 'SECTIONS UPDATED' section listing all three modified sections with detailed descriptions of each change made. This serves as the summary of changes for the run."
+    }
+  ],
+  "summary": {
+    "pass_rate": 1.0,
+    "passed": 7,
+    "failed": 0,
+    "total": 7
+  }
+}

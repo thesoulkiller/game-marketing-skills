@@ -1,0 +1,35 @@
+{
+  "run_id": "eval-3-without_skill",
+  "expectations": [
+    {
+      "text": "Reads existing context file before making changes (check if existing file was created and updated file differs from it)",
+      "passed": true,
+      "evidence": "existing-game-marketing-context.md exists (78 lines, original content). Updated game-marketing-context.md differs substantially — 95 lines, new CPI actuals columns, retention actuals column, Campaign History section, and revised age range. File was clearly read and then updated rather than created from scratch."
+    },
+    {
+      "text": "Updates CPI actuals: US $1.80 and Germany $0.95",
+      "passed": true,
+      "evidence": "Updated file CPI table includes: '| US | $1.50 | $1.80 | Over target — optimize |' and '| DE | $1.00 | $0.95 | On target — scale |'"
+    },
+    {
+      "text": "Notes D7 retention actual (18%) vs target (22%) gap",
+      "passed": true,
+      "evidence": "Retention table shows '| D7 | 22% | 18% | Below target (-4pp) |' and notes section states 'D7 at 18% is 4 percentage points below the 22% target.'"
+    },
+    {
+      "text": "Updates target player age range to 25-40 (not 18-35)",
+      "passed": true,
+      "evidence": "Updated file shows '**Age Range**: 25–40 *(updated from 18–35 — first campaign data shows primary skew is 25–40)*'"
+    },
+    {
+      "text": "Does not rewrite unrelated sections (monetization, store presence, brand voice should be essentially unchanged)",
+      "passed": true,
+      "evidence": "Monetization line in Product Overview is identical. UA Channels, Messaging Pillars, and Localization Notes sections are word-for-word unchanged between files. Creative Strategy gained one line about audience refinement but core content is preserved. No brand voice or store presence sections existed to be rewritten."
+    },
+    {
+      "text": "Confirms or summarizes what changed",
+      "passed": true,
+      "evidence": "A 'Campaign History' table was added summarizing Wave 1 findings: 'US CPI $1.80 (over); DE CPI $0.95 (on target); D7 retention 18% (below 22% target); audience skews 25–40 male'. Open Questions checkmarks also explicitly confirm what was validated."
+    }
+  ]
+}

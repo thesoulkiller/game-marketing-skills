@@ -1,0 +1,82 @@
+EVAL NOTES — game-marketing-context skill / eval-3-context-update / with_skill
+================================================================================
+Date: 2026-04-30
+Skill version: 1.0.0
+Evaluator task: Targeted context update after first UA campaign data
+
+--- SKILL BEHAVIOUR OBSERVED ---
+
+1. Update workflow triggered correctly.
+   The skill's Step 1 branch ("if it exists: read it, ask which sections to update,
+   only gather info for requested sections") was followed. No unrelated sections
+   were touched.
+
+2. Sections updated:
+   - Target Player (2 fields changed)
+       - Primary age range: 18–35 → 25–40
+       - Gender skew: "~75% M" → "~80–85% M"; confirmed by campaign data note added
+       - Player archetypes: age bands in archetype rows updated to reflect 25–40 skew
+         (The Tactician 25–34 → 28–40, The Collector 22–30 → 25–35)
+   - Performance Targets & Metrics
+       - CPI (US) actual: — → $1.80 with ⚠ above-target flag
+       - CPI (DE) actual: — → $0.95 with on-target note
+       - D7 retention actual: — → 18% with ⚠ below-target flag
+       - Added "UA notes (April 2026)" prose row summarising the campaign findings
+         and flagging the two KPI gates at risk before global launch
+
+3. Sections NOT changed (correct):
+   - Game Overview
+   - Monetization Model
+   - Launch Status (KPI gates preserved unchanged — they remain the targets)
+   - Competitive Landscape
+   - Store Presence
+   - UA & Channel Strategy
+   - Brand Voice & Tone
+
+4. Timestamp updated in document header from 2026-02-15 → 2026-04-30.
+
+--- SKILL STRENGTHS IN THIS SCENARIO ---
+
+- The partial-update pattern (read → identify → change only relevant sections)
+  worked cleanly. The skill's instruction "Only gather info for the requested
+  sections" is unambiguous and easy to follow.
+- The Performance Targets table format (Target | Current) is well-designed for
+  exactly this use case: filling in actuals over time while preserving targets.
+- The skill's tip "Push for numbers" (in the Tips section) is reflected in the
+  structured actuals capture — $1.80, $0.95, 18% are all precise values.
+- Flagging above/below target inline (⚠) is useful for downstream skills that
+  will read this context (e.g., ad-creative, launch-strategy) so they immediately
+  see where the soft-launch KPI gates stand.
+
+--- SKILL GAPS / IMPROVEMENT OPPORTUNITIES ---
+
+1. The skill does not explicitly instruct the agent to update the Player Archetypes
+   table when the age range changes. The age bands in the archetype rows were
+   updated here as a logical inference, but a more explicit instruction like
+   "if age range changes, review archetype age bands for consistency" would
+   reduce the chance of a mismatch.
+
+2. No dedicated "Actuals history" or "Campaign log" section exists in the template.
+   As the game runs multiple UA campaigns, actuals will be overwritten each update.
+   A lightweight changelog row or dated actuals section would help teams track
+   performance over time without losing prior readings.
+
+3. The skill says to save to `.agents/game-marketing-context.md` (the cross-agent
+   standard path). For this eval the output was written to the specified eval path
+   instead. In a real project, the skill would save to `.agents/`.
+
+4. The skill's update workflow asks "which sections they want to update" — this
+   is conversational. In a non-interactive (agentic/automated) run, the agent
+   must infer sections from the user's message content, which it did correctly
+   here. A note in the skill acknowledging agentic inference would be helpful.
+
+--- PASS/FAIL ASSESSMENT ---
+
+PASS. The skill provided sufficient structure to:
+  - identify which sections needed updating
+  - preserve all unrelated sections intact
+  - fill in actuals without overwriting targets
+  - capture audience refinement with a source note
+
+The output is production-quality and safe to hand off to any downstream
+game marketing skill.

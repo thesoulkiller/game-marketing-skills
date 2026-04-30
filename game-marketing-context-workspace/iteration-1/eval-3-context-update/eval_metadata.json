@@ -1,0 +1,13 @@
+{
+  "eval_id": 3,
+  "eval_name": "context-update-ua-data",
+  "prompt": "I already have a game-marketing-context.md set up. We just got our first UA campaign data back and need to update the targeting section. Our CPI on Meta came in at $1.80 in the US and $0.95 in Germany. D7 retention is 18% which is below our 22% target. We also realized our primary audience skews more 25-40 male than our original 18-35 estimate. Can you update the context with these findings?",
+  "assertions": [
+    { "text": "Reads existing context file before making changes" },
+    { "text": "Updates CPI actuals: US $1.80 and Germany $0.95" },
+    { "text": "Notes D7 retention actual (18%) vs target (22%) gap" },
+    { "text": "Updates target player age range to 25-40 (not 18-35)" },
+    { "text": "Does not rewrite unrelated sections (monetization, store presence, brand voice unchanged)" },
+    { "text": "Confirms or summarizes what changed" }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "run_id": "eval-1-with_skill",
+  "expectations": [
+    {
+      "text": "Core loop uses the action→reward→progression→loop structure, not just a vague description",
+      "passed": true,
+      "evidence": "Core loop explicitly structured as: puzzle battle (action) → earns resources/currency (reward) → constructs/upgrades kingdom structures (progression) → new structures unlock next puzzle battle tier (loop). Quoted: 'Player enters a puzzle battle → solves a match-3 or logic puzzle in 60–90 seconds → earns building resources and currency → spends them to construct or upgrade kingdom structures → new structures unlock the next puzzle battle tier, repeating every 3–5 minutes.'"
+    },
+    {
+      "text": "Genre is classified using the taxonomy table with session length referenced",
+      "passed": true,
+      "evidence": "A 'Genre benchmark reference' table is present with columns: Genre, Session (session lengths listed as '5–15 min, 3–6x/day' for casual and '15–30 min, 2–4x/day' for mid-core), D1 target, and CPI (US). Session length is explicitly included in the table."
+    },
+    {
+      "text": "Genre-appropriate D1 retention target is present (35–45% for casual, 25–35% for mid-core) — not a made-up number outside these ranges",
+      "passed": true,
+      "evidence": "Taxonomy table shows D1 target of 35–45% for casual and 25–35% for mid-core, exactly matching the specified ranges. KPI gates table uses ≥ 35% for the hybrid game with rationale 'Mid-point of casual (40%) and mid-core (25%) benchmarks'."
+    },
+    {
+      "text": "Genre-appropriate CPI benchmark range is referenced (e.g., $1.00–2.50 for casual or $1.50–4.00 for mid-core US)",
+      "passed": true,
+      "evidence": "Taxonomy table lists CPI (US) as $1.00–2.50 for casual and $1.50–4.00 for mid-core, exactly matching the specified benchmark ranges."
+    },
+    {
+      "text": "Soft launch market selection includes CA, AU, or NZ with at least one reason why (English-speaking, iOS-heavy, or GDPR-free)",
+      "passed": true,
+      "evidence": "Soft launch regions are Canada, Australia, New Zealand. Reasons given include: English-speaking (like the US highest-LTV market), iOS-heavy (reliable iOS funnel data), and Outside GDPR (CA/AU/NZ — less consent friction, cleaner attribution signal)."
+    },
+    {
+      "text": "UA channel list uses current network names: Unity LevelPlay (not IronSource) and Liftoff (not Vungle)",
+      "passed": true,
+      "evidence": "UA channel list includes 'Unity LevelPlay (formerly IronSource — merged 2023)' and 'Liftoff (formerly Vungle — rebranded 2023)'. Both current names are used correctly."
+    },
+    {
+      "text": "Attribution tool field is present and flagged as required before paid UA",
+      "passed": true,
+      "evidence": "Two instances: Line 146 'Attribution tool: [NEEDS INPUT] — must be selected and integrated before any paid UA spend. Recommended options: AppsFlyer, Adjust, or Singular. This is a hard blocker for launching UA campaigns.' Also repeated in UA section: 'Attribution tool: [NEEDS INPUT] — required before any paid spend. Without MMP integration, campaign performance is unmeasurable. Set this up first.'"
+    },
+    {
+      "text": "Monetization philosophy field is present (whale-friendly / soft monetization / balanced)",
+      "passed": true,
+      "evidence": "Monetization philosophy field present: 'Broad payer base (soft monetization) — maximize conversion at low price points, with a secondary mid-tier spender layer via bundles and battle pass. Avoid mechanics that read as pay-to-win, which alienates the casual-puzzle segment.'"
+    },
+    {
+      "text": "Fabricated KPI numbers are explicitly flagged as assumptions or genre benchmarks, not stated as facts",
+      "passed": true,
+      "evidence": "Document opens with 'All assumed values are marked with *(assumed)*.' Every KPI in the performance targets table is marked '*(assumed)*' or '*(assumed genre midpoint)*'. Footer note reads: 'All targets marked *(assumed)* are genre-benchmark-derived starting points for a casual-to-mid-core F2P hybrid. Validate against studio targets and update before soft launch.'"
+    }
+  ],
+  "summary": {
+    "pass_rate": 1.0,
+    "passed": 9,
+    "failed": 0,
+    "total": 9
+  }
+}

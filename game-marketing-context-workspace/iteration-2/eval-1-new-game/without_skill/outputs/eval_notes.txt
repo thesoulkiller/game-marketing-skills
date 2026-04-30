@@ -1,0 +1,65 @@
+EVALUATION NOTES — Without Skill Guidance
+Task: Set up game marketing context for a new F2P mobile game
+Condition: Baseline (no skill file loaded)
+Date: 2026-04-30
+
+--- APPROACH ---
+
+Completed this task using general knowledge of mobile game marketing, F2P monetization models, and UA industry benchmarks. No skill file was referenced.
+
+The output was structured based on what a reasonably experienced mobile game marketer would want documented before a soft launch, drawing on common frameworks from the mobile gaming industry.
+
+--- STRUCTURE CHOSEN ---
+
+Sections produced:
+1. Product Overview — captured known facts + monetization assumptions
+2. Development Status — timeline documented
+3. Target Audience — primary/secondary segments, comps
+4. USPs — derived from the game description
+5. Marketing Goals by Phase — pre-soft launch / soft launch / global launch
+6. Channels & Tactics — organic, paid UA, influencer, ASO, PR
+7. Key Metrics — with assumed benchmarks
+8. Competitive Positioning — differentiation vs. named comps
+9. Brand Voice — tone guidelines
+10. Assumptions Made — explicit list of all gaps filled by assumption
+11. Next Steps — 10 prioritized action items
+
+--- GAPS AND ASSUMPTIONS ---
+
+Several fields were not provided by the user and required assumptions:
+- Game name (placeholder used)
+- Soft launch markets (assumed Canada, Australia, Philippines)
+- Monetization mechanics (assumed standard IAP + battle pass)
+- Global launch timeline (assumed 3-6 months post soft launch)
+- Team size / publisher status (assumed indie, no publisher)
+- Pre-registration targets (conservative estimate)
+- UA budget (not specified — benchmarks given instead of hard targets)
+
+--- QUALITY ASSESSMENT ---
+
+Strengths:
+- Comprehensive coverage across lifecycle phases
+- Grounded in real mobile gaming benchmarks (retention %, CPI, IPM)
+- Named real competitor comps and real ad networks
+- Explicit about what was assumed vs. what was given
+- Actionable next steps section
+
+Weaknesses:
+- Without a skill file, there is no enforced structure or standard field set
+- Some sections may over-index on paid UA and under-cover areas like CRM, push notification strategy, and live ops
+- No prompting for missing critical info (e.g., did not ask for game name, budget, or team size before proceeding)
+- Brand voice section is thin — a skill would likely prompt for more brand definition work
+- Competitive analysis is surface-level; a skill might include a framework for deeper comp analysis
+
+--- COMPARISON HYPOTHESIS (vs. with-skill condition) ---
+
+Expected differences when skill is used:
+- More structured intake (skill likely prompts for specific missing fields)
+- Standardized section names and field types for downstream agent consumption
+- Possibly more concise, templated output vs. this more narrative style
+- May handle the "no game name yet" case more gracefully
+- Likely includes explicit metadata fields (last updated, version, etc.) for context file management
+
+--- OVERALL ---
+
+The baseline output is usable and reasonably comprehensive. It would benefit a founding marketer or solo developer preparing for soft launch. However, it reflects general marketing knowledge rather than a specialized, validated game marketing framework. A skill file would likely improve consistency, completeness of intake, and structured formatting for agent reuse.

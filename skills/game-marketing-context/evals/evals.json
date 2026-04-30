@@ -1,0 +1,125 @@
+{
+  "skill_name": "game-marketing-context",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm building a new mobile game — a fantasy city-builder where you grow a kingdom by completing puzzle battles. It's free-to-play, targeting casual to mid-core players, age 18-35. We're not on the stores yet, still 3 months from soft launch. Help me set up my game marketing context.",
+      "expected_output": "A complete .agents/game-marketing-context.md using the skill's structured template. Core loop described using action→reward→progression→loop format. Genre classified from the taxonomy table with session length and CPI benchmark range noted. Launch status set to pre-launch. Soft launch market selection explained with rationale (CA/AU/NZ, why English-speaking + iOS-heavy + GDPR-free). KPI gates listed per genre. UA channels use current network names (Unity LevelPlay, Liftoff — not IronSource, Vungle). Attribution tool noted as required before paid spend. Unknown fields marked [NEEDS INPUT] or flagged as assumptions.",
+      "assertions": [
+        {
+          "text": "Core loop uses the action→reward→progression→loop structure, not just a vague description like 'puzzle gameplay'",
+          "type": "quality_check"
+        },
+        {
+          "text": "Genre is classified using the taxonomy table (casual, mid-core, or hybrid) with session length referenced",
+          "type": "content_check"
+        },
+        {
+          "text": "Genre-appropriate D1 retention target is present (35–45% for casual, 25–35% for mid-core) — not a made-up number",
+          "type": "content_check"
+        },
+        {
+          "text": "Genre-appropriate CPI benchmark range is referenced (e.g., $1.00–2.50 for casual, $1.50–4.00 for mid-core US)",
+          "type": "content_check"
+        },
+        {
+          "text": "Soft launch market selection includes CA, AU, or NZ with at least one reason why (English-speaking, iOS-heavy, or GDPR-free)",
+          "type": "content_check"
+        },
+        {
+          "text": "UA channel list uses current network names: Unity LevelPlay (not IronSource) and Liftoff (not Vungle)",
+          "type": "content_check"
+        },
+        {
+          "text": "Attribution tool field is present and flagged as required before paid UA",
+          "type": "content_check"
+        },
+        {
+          "text": "Monetization philosophy field is present (whale-friendly / soft monetization / balanced) — not just IAP categories",
+          "type": "content_check"
+        },
+        {
+          "text": "Fabricated KPI numbers are explicitly flagged as assumptions or genre benchmarks, not stated as facts",
+          "type": "quality_check"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Here's my game on Google Play: https://play.google.com/store/apps/details?id=com.HonStudios.LuminoriaTactics&hl=en — can you auto-draft a game marketing context doc from this listing? The game is in global launch now.",
+      "expected_output": "Agent fetches or uses available data for LUTA: Luminoria Tactics (HonStudios, PEGI 12, tactical RPG, 100+ installs, IAPs). Produces a .agents/game-marketing-context.md using the skill's template. Genre classified as mid-core tactical/strategy with appropriate benchmark ranges. Launch status global launch. Core loop template used even if speculative (and flagged as assumption). Unknown KPIs marked [NEEDS INPUT]. iOS measurement section acknowledges ATT/SKAdNetwork. UA channels use current names. ROAS targets include measurement window (D7/D30).",
+      "assertions": [
+        {
+          "text": "Game title correctly identified as LUTA: Luminoria Tactics or Luminoria Tactics",
+          "type": "content_check"
+        },
+        {
+          "text": "Genre classified as mid-core or tactical/strategy — NOT casual or hyper-casual — with session length benchmark referenced (15–30 min)",
+          "type": "content_check"
+        },
+        {
+          "text": "Mid-core CPI benchmark range referenced for Tier 1 (approximately $1.50–4.00 for US)",
+          "type": "content_check"
+        },
+        {
+          "text": "Core loop is written using the action→reward→progression→loop structure, even if speculative and flagged as assumption",
+          "type": "quality_check"
+        },
+        {
+          "text": "ROAS targets include a time window (D7, D30, or D90) — not just 'good ROAS'",
+          "type": "content_check"
+        },
+        {
+          "text": "iOS measurement section mentions ATT, SKAdNetwork, or the ~25–35% opt-in rate limitation",
+          "type": "content_check"
+        },
+        {
+          "text": "UA channels do not include IronSource as a standalone network or Vungle (outdated names)",
+          "type": "content_check"
+        },
+        {
+          "text": "All unknown KPIs (retention actuals, CPI actuals, ARPPU) are marked [NEEDS INPUT] — not fabricated",
+          "type": "quality_check"
+        }
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I already have a game-marketing-context.md set up. We just got our first UA campaign data back and need to update the targeting section. Our CPI on Meta came in at $1.80 in the US and $0.95 in Germany. D7 retention is 18% which is below our 22% target. We also realized our primary audience skews more 25-40 male than our original 18-35 estimate. Can you update the context with these findings?",
+      "expected_output": "Agent reads the existing context file first. Updates only the relevant sections: CPI actuals for US ($1.80) and DE ($0.95), D7 retention actual (18%) vs target (22%) with gap noted, age range updated to 25-40. Critically: the $1.80 US CPI should be compared against the genre benchmark range — if mid-core, $1.80 is below the $1.50–4.00 range (good sign); if casual, $1.80 is slightly above the $1.00–2.50 range (flag). The D7 18% should be evaluated against genre target (below 25% floor for casual = concerning; below 12% floor for mid-core = fine). Agent does NOT rewrite unrelated sections. Summarizes changes.",
+      "assertions": [
+        {
+          "text": "Reads existing context file before making changes",
+          "type": "behavior_check"
+        },
+        {
+          "text": "Updates CPI actuals: US $1.80 and Germany $0.95 with source noted (Meta campaign)",
+          "type": "content_check"
+        },
+        {
+          "text": "D7 retention actual (18%) is compared against the genre benchmark range, not just stated as 'below target'",
+          "type": "quality_check"
+        },
+        {
+          "text": "US CPI $1.80 is evaluated against genre-appropriate CPI benchmark (not just noted as a number)",
+          "type": "quality_check"
+        },
+        {
+          "text": "Target player age range updated to 25-40 with the data source noted (UA campaign data)",
+          "type": "content_check"
+        },
+        {
+          "text": "Unrelated sections (monetization, store presence, brand voice) are not rewritten or altered",
+          "type": "quality_check"
+        },
+        {
+          "text": "Summary of changes is provided (what was updated and why)",
+          "type": "behavior_check"
+        }
+      ],
+      "files": []
+    }
+  ]
+}

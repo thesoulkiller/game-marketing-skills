@@ -1,0 +1,35 @@
+{
+  "run_id": "eval-3-with_skill",
+  "expectations": [
+    {
+      "text": "Reads existing context file before making changes (check if existing file was created and updated file differs from it)",
+      "passed": true,
+      "evidence": "existing-game-marketing-context.md exists with original content dated 2026-02-15; updated file differs in multiple sections (age range, metrics table, added UA notes paragraph) confirming the existing file was read before changes were made"
+    },
+    {
+      "text": "Updates CPI actuals: US $1.80 and Germany $0.95",
+      "passed": true,
+      "evidence": "Line 72: 'CPI (US) | $1.50 | $1.80 ⚠ above target — Meta campaign, April 2026'; Line 73: 'CPI (DE) | $1.00 | $0.95 — Meta campaign, April 2026'"
+    },
+    {
+      "text": "Notes D7 retention actual (18%) vs target (22%) gap",
+      "passed": true,
+      "evidence": "Line 76: 'D7 retention | 22% | 18% ⚠ below target — April 2026'; UA notes paragraph also states 'D7 retention at 18% is 4 points below the 22% KPI gate'"
+    },
+    {
+      "text": "Updates target player age range to 25-40 (not 18-35)",
+      "passed": true,
+      "evidence": "Line 15: '**Primary age range:** 25–40 *(updated from 18–35 based on first UA campaign data, April 2026)*'"
+    },
+    {
+      "text": "Does not rewrite unrelated sections (monetization, store presence, brand voice should be essentially unchanged)",
+      "passed": true,
+      "evidence": "Monetization Model section (lines 33-43), Store Presence section (lines 82-88), and Brand Voice & Tone section (lines 102-106) are word-for-word identical between existing and updated files"
+    },
+    {
+      "text": "Confirms or summarizes what changed",
+      "passed": true,
+      "evidence": "Line 81 adds: '**UA notes (April 2026):** First Meta campaign data in. US CPI came in at $1.80 (20% above the $1.50 gate) — needs creative or audience optimisation before global. DE CPI of $0.95 is on-target and a bright spot. D7 retention at 18% is 4 points below the 22% KPI gate; retention improvement work required before global launch.'"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "run_id": "eval-1-without_skill",
+  "expectations": [
+    {
+      "text": "Core loop uses the action→reward→progression→loop structure, not just a vague description",
+      "passed": false,
+      "evidence": "Core loop is stated as 'Complete puzzle battles → earn resources → grow kingdom' — a 3-part chain (action→reward→progression) without a closing loop step that returns the player back to the start. The fourth element (→loop) is absent."
+    },
+    {
+      "text": "Genre is classified using the taxonomy table with session length referenced",
+      "passed": false,
+      "evidence": "Genre is listed as 'Fantasy City-Builder / Puzzle RPG' in the Product Overview section. No taxonomy table is present in the document. Session length (5–20 min) appears only in the Target Audience psychographics, not linked to genre classification."
+    },
+    {
+      "text": "Genre-appropriate D1 retention target is present (35–45% for casual, 25–35% for mid-core) — not a made-up number outside these ranges",
+      "passed": true,
+      "evidence": "D1 Retention target listed as '>40%' in the Key Metrics table. This falls within the 35–45% casual genre range."
+    },
+    {
+      "text": "Genre-appropriate CPI benchmark range is referenced (e.g., $1.00–2.50 for casual or $1.50–4.00 for mid-core US)",
+      "passed": false,
+      "evidence": "CPI is listed as '<$1.50 Tier 2, <$3 Tier 1' — these are upper-bound targets, not benchmark ranges. No explicit range like $1.00–2.50 or $1.50–4.00 is cited, and the values are framed as soft launch goals rather than genre benchmarks."
+    },
+    {
+      "text": "Soft launch market selection includes CA, AU, or NZ with at least one reason why (English-speaking, iOS-heavy, or GDPR-free)",
+      "passed": false,
+      "evidence": "Soft launch markets listed as 'Canada, Australia, Philippines assumed' (line 67), which includes CA and AU. However, no reason is given for these selections. The Assumptions section only labels them 'Tier 2' with no rationale such as English-speaking, iOS-heavy, or GDPR-free."
+    },
+    {
+      "text": "UA channel list uses current network names: Unity LevelPlay (not IronSource) and Liftoff (not Vungle)",
+      "passed": false,
+      "evidence": "Line 95 lists 'AppLovin MAX, ironSource, Unity Ads' and line 74 also uses 'ironSource'. Both references use the outdated 'ironSource' name instead of 'Unity LevelPlay'. 'Unity Ads' is used instead of 'Unity LevelPlay'. Liftoff is not mentioned anywhere in the document."
+    },
+    {
+      "text": "Attribution tool field is present and flagged as required before paid UA",
+      "passed": false,
+      "evidence": "Attribution tools are mentioned in Next Steps item 8: 'Set up analytics (Adjust or AppsFlyer for attribution, Firebase for in-game)'. There is no dedicated attribution field, and it is not explicitly flagged as required before paid UA — it appears as one of ten next steps without prioritization or a warning."
+    },
+    {
+      "text": "Monetization philosophy field is present (whale-friendly / soft monetization / balanced)",
+      "passed": false,
+      "evidence": "Monetization is described as 'Assumed — IAP (gems/currency), battle passes, cosmetic bundles, energy refills'. This lists mechanics only. No monetization philosophy classification (whale-friendly, soft monetization, or balanced) is present anywhere in the document."
+    },
+    {
+      "text": "Fabricated KPI numbers are explicitly flagged as assumptions or genre benchmarks, not stated as facts",
+      "passed": true,
+      "evidence": "The Key Metrics table column is labeled 'Target (Assumed)' and there is a dedicated 'Assumptions Made' section. KPI targets are consistently qualified with 'Assumed' or 'TBD', making clear they are not stated as facts."
+    }
+  ],
+  "summary": {
+    "pass_rate": 0.22,
+    "passed": 2,
+    "failed": 7,
+    "total": 9
+  }
+}

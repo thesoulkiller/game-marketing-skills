@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "new-pre-launch-game",
+  "prompt": "I'm building a new mobile game — a fantasy city-builder where you grow a kingdom by completing puzzle battles. It's free-to-play, targeting casual to mid-core players, age 18-35. We're not on the stores yet, still 3 months from soft launch. Help me set up my game marketing context.",
+  "assertions": [
+    { "text": "Creates a game-marketing-context.md output file" },
+    { "text": "Launch status is set to pre-launch (not soft launch or global)" },
+    { "text": "Includes genre classification from the taxonomy (casual, mid-core, or hybrid)" },
+    { "text": "Monetization model section is present and identifies F2P + IAP" },
+    { "text": "Does not fabricate specific KPI numbers without flagging them as assumptions" },
+    { "text": "Core loop is described specifically (puzzle battles + city building), not just 'gameplay'" }
+  ]
+}

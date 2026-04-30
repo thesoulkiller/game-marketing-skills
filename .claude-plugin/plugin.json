@@ -1,0 +1,12 @@
+{
+  "name": "game-marketing-skills",
+  "description": "Mobile game marketing skills for AI agents — UA, ASO, live ops, monetization, and launch strategy for App Store & Google Play",
+  "version": "1.9.0",
+  "author": {
+    "name": "thesoulkiller"
+  },
+  "homepage": "https://github.com/thesoulkiller/game-marketing-skills",
+  "repository": "https://github.com/thesoulkiller/game-marketing-skills",
+  "license": "MIT",
+  "skills": "./skills"
+}

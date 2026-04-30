@@ -1,0 +1,14 @@
+{
+  "eval_id": 2,
+  "eval_name": "live-game-autodraft-luminoria",
+  "prompt": "Here's my game on Google Play: https://play.google.com/store/apps/details?id=com.HonStudios.LuminoriaTactics&hl=en — can you auto-draft a game marketing context doc from this listing? The game is in global launch now.",
+  "assertions": [
+    { "text": "Creates a game-marketing-context.md output file" },
+    { "text": "Game title is correctly identified as LUTA: Luminoria Tactics (or Luminoria Tactics)" },
+    { "text": "Developer is identified as HonStudios" },
+    { "text": "Launch status is set to global launch" },
+    { "text": "Genre reflects tactical/strategy positioning (not casual or hyper-casual)" },
+    { "text": "IAP presence is noted (listing confirms in-app purchases available)" },
+    { "text": "Flags missing data (KPI targets, UA channels, retention actuals) rather than fabricating them" }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "run_id": "eval-2-with_skill",
+  "expectations": [
+    {
+      "text": "Creates a game-marketing-context.md output file",
+      "passed": true,
+      "evidence": "File exists at outputs/game-marketing-context.md with full structured content"
+    },
+    {
+      "text": "Game title is correctly identified as LUTA: Luminoria Tactics (or Luminoria Tactics)",
+      "passed": true,
+      "evidence": "**Title:** LUTA: Luminoria Tactics"
+    },
+    {
+      "text": "Developer is identified as HonStudios",
+      "passed": true,
+      "evidence": "Auto-drafted from Google Play listing: https://play.google.com/store/apps/details?id=com.HonStudios.LuminoriaTactics \u2014 developer inferred from package ID; also referenced in footer as 'HonStudios'"
+    },
+    {
+      "text": "Launch status is set to global launch",
+      "passed": true,
+      "evidence": "**Current phase:** Global launch"
+    },
+    {
+      "text": "Genre reflects tactical/strategy positioning (not casual or hyper-casual)",
+      "passed": true,
+      "evidence": "**Genre / Sub-genre:** Strategy / Tactical RPG (mid-core)"
+    },
+    {
+      "text": "IAP presence is noted (listing confirms in-app purchases available)",
+      "passed": true,
+      "evidence": "**Model type:** F2P (free-to-play) + IAP (confirmed via Play Store listing)"
+    },
+    {
+      "text": "Flags missing data (KPI targets, UA channels, retention actuals) rather than fabricating them",
+      "passed": true,
+      "evidence": "All KPI metric fields marked [NEEDS INPUT]; UA channels section states [NEEDS INPUT: Meta, Google UAC, TikTok...]; footer note: 'No KPI targets or actuals were available from the store listing. All metrics require direct input from the team.'"
+    }
+  ],
+  "summary": {
+    "pass_rate": 1.0,
+    "passed": 7,
+    "failed": 0,
+    "total": 7
+  }
+}

@@ -1,0 +1,44 @@
+EVAL NOTES — without_skill baseline
+Task: Update game-marketing-context.md with Wave 1 UA campaign findings
+Date: 2026-04-30
+Model: claude-sonnet-4-6
+
+=== APPROACH ===
+Completed without invoking any skill file. Used general UA/mobile marketing knowledge to:
+1. Create a realistic "existing" context file matching the specified setup
+2. Produce an updated context incorporating all four data points from the task
+
+=== DATA POINTS INCORPORATED ===
+1. Meta CPI US: $1.80 actual vs $1.50 target (+20% over)
+2. Meta CPI DE: $0.95 actual vs $1.00 target (slightly under, on target)
+3. D7 Retention: 18% actual vs 22% target (-4 percentage points)
+4. Audience shift: primary skew confirmed as 25-40 male vs original 18-35 estimate
+
+=== DECISIONS MADE ===
+- Revised target audience age range from 18-35 to 25-40
+- Preserved original estimate in context for comparison/traceability
+- Added delta column to performance table to make variance visible at a glance
+- Included analytical commentary for each metric (not just raw numbers)
+- Added actionable next steps derived from the findings
+- Added a revision history section to the context file
+- Noted DE is efficient and should be maintained/scaled
+- Flagged US CPI overrun as likely tied to broad age targeting, connecting cause to new audience finding
+- Flagged D7 retention gap with 4 specific remediation actions grounded in standard mobile UA practice (onboarding audit, creative expectation alignment, lookalike audiences, push re-engagement)
+
+=== QUALITY ASSESSMENT ===
+Strengths:
+- All four data points from the task are captured and contextualized
+- Context is actionable, not just descriptive — next steps are concrete
+- Audience revision is clearly explained with rationale
+- CPI and retention findings are linked to each other and to root-cause hypotheses
+- Revision history makes the file auditable
+
+Potential gaps / areas a skill might improve:
+- A dedicated skill might enforce a stricter schema/template for context files, ensuring consistent structure across iterations
+- A skill might inject product-specific context automatically (e.g., known onboarding milestone events) rather than relying on generic advice
+- A skill might prompt for additional data points not yet captured (LTV estimates, ROAS window, creative performance breakdown) before finalizing the update
+- A skill could reference genre-specific D7 benchmarks to contextualize whether 18% is typical for mid-core tactical RPGs vs a true outlier
+- Attribution validation step (confirming Adjust event firing) was included based on general best practice; a skill might make this a required checklist item
+
+=== SKILL COVERAGE HYPOTHESIS ===
+A product-marketing-context skill would likely produce a more structured, schema-enforced output and reduce the reliance on the model to infer what sections matter. The without-skill output is functional but the structure and depth of analysis depend entirely on model knowledge and interpretation of the task prompt.

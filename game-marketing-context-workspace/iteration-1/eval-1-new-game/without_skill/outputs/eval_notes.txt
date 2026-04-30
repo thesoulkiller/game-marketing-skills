@@ -1,0 +1,73 @@
+EVAL NOTES — Baseline (No Skill) — eval-1-new-game
+=======================================================
+
+Task: Create a game marketing context document for a new pre-launch mobile game.
+Condition: No skill file loaded. General AI assistant behavior only.
+
+--- APPROACH ---
+
+Without a skill to guide the structure, I relied on general knowledge of:
+- Mobile game marketing best practices (F2P genre norms)
+- Common marketing context document structures used in game studios
+- Industry benchmarks for casual/mid-core fantasy games
+- Pre-launch vs. soft launch vs. global launch marketing phases
+
+I interpreted "game marketing context" as a foundational document that captures the product, audience, positioning, channels, messaging, and goals — similar to what a marketing lead would prepare before a launch campaign kicks off.
+
+--- STRUCTURE DECISIONS ---
+
+Chose to organize the document into 11 sections:
+1. Product overview — core facts about the game
+2. Target audience — demographic + psychographic + player archetypes
+3. Value proposition — the "why this game" pitch
+4. Competitive landscape — direct and adjacent competitors, differentiation
+5. Marketing objectives by phase — pre-launch, soft launch, global
+6. Key channels — organic, paid, influencer, ASO
+7. Messaging framework — primary/supporting messages + tone
+8. Pre-registration strategy — tactics and goals
+9. Content pillars — recurring content themes
+10. KPIs — organized by phase
+11. Assumptions — documenting gaps where user input was needed
+
+--- ASSUMPTIONS MADE ---
+
+Since the user provided only genre, business model, target demo, and timeline, I filled in:
+- Placeholder game name ("Realm Forge")
+- Standard F2P monetization model (gems, battle pass, cosmetics)
+- Colorful/vibrant fantasy art style assumed (most common for this target demo)
+- Puzzle mechanic assumed to be match-3 or similar (most common in mobile)
+- Standard soft launch markets (Canada, Australia, Philippines, Nordics)
+- Pre-registration goal of 50K-100K (typical for mid-size launch)
+- LTV:CAC target of 3:1 at 180 days (industry norm for sustainable F2P)
+- Day 7 retention target of 25%+ (mid-core casual hybrid benchmark)
+
+--- WHAT A SKILL WOULD LIKELY IMPROVE ---
+
+A dedicated skill would likely:
+- Prompt for specific missing inputs before generating (game name, art style, puzzle type, budget, team size)
+- Follow a standardized template structure used specifically for game marketing contexts
+- Include game-specific frameworks (e.g., FTUE conversion funnel, genre-specific UA creative formulas)
+- Reference specific tools relevant to game marketing (Appsflyer, Sensor Tower, GameAnalytics, etc.)
+- Separate mobile game UA strategy more granularly (rewarded video, playables, etc.)
+- Include a soft launch decision framework (when to graduate to global)
+- Potentially generate a one-page positioning brief as a separate artifact
+
+--- QUALITY SELF-ASSESSMENT ---
+
+Strengths:
+- Comprehensive coverage of pre-launch marketing phases
+- Audience archetypes add depth beyond demographics
+- KPIs organized by phase are immediately actionable
+- Competitive framing is accurate for 2024-2026 mobile market
+
+Weaknesses:
+- No game name — limits memorability and specificity
+- Assumptions around puzzle mechanic and art style could be wrong
+- Budget and team context missing — channel priorities may not fit reality
+- No mention of specific tools/platforms used for UA tracking (MMP, analytics)
+- Messaging could be sharper with actual game name and confirmed mechanics
+- Missing: localization strategy, platform-specific ASO details, influencer tier breakdown with rates
+
+--- CONCLUSION ---
+
+The output is a reasonable starting point for a pre-launch mobile game marketing context. It covers the essential pillars a marketing team would need to align on. However, it would benefit significantly from: (1) a skill that prompts for the right inputs systematically, and (2) access to current industry benchmarks and game-specific tooling knowledge. A skilled agent would likely produce a more structured, game-specific, and actionable output with fewer assumptions.

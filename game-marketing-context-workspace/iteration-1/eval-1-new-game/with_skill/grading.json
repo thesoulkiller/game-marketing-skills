@@ -1,0 +1,35 @@
+{
+  "run_id": "eval-1-with_skill",
+  "expectations": [
+    {
+      "text": "Creates a game-marketing-context.md output file",
+      "passed": true,
+      "evidence": "File exists at outputs/game-marketing-context.md with full content (156 lines, all sections populated)"
+    },
+    {
+      "text": "Launch status is set to pre-launch (not soft launch or global)",
+      "passed": true,
+      "evidence": "\"**Current phase:** Pre-launch\" — soft launch and global launch are listed as future targets, not current status"
+    },
+    {
+      "text": "Includes genre classification from the taxonomy (casual, mid-core, or hybrid)",
+      "passed": true,
+      "evidence": "\"**Genre / Sub-genre:** Strategy / Simulation hybrid with Puzzle combat — Casual to Mid-core\" and \"**Player type:** Casual / Mid-core (dual audience)\""
+    },
+    {
+      "text": "Monetization model section is present and identifies F2P + IAP",
+      "passed": true,
+      "evidence": "\"**Model type:** Free-to-play (F2P) + IAP\" under the Monetization Model section"
+    },
+    {
+      "text": "Does not fabricate specific KPI numbers without flagging them as assumptions",
+      "passed": true,
+      "evidence": "KPI targets are flagged: \"*(assumed targets — adjust based on your monetization benchmarks)*\" and \"*All targets are assumed benchmarks for casual-to-mid-core F2P puzzle/strategy hybrids.*\""
+    },
+    {
+      "text": "Core loop is described specifically (puzzle battles + city building), not just 'gameplay'",
+      "passed": true,
+      "evidence": "\"Player draws a puzzle battle card → completes a match-3 or logic puzzle in 60–90 seconds → earns resources → spends resources to build/upgrade kingdom structures → unlocks the next puzzle battle\""
+    }
+  ]
+}

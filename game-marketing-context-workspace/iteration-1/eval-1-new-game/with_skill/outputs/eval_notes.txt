@@ -1,0 +1,104 @@
+EVAL NOTES — game-marketing-context skill
+Eval date: 2026-04-30
+Game: Pre-launch fantasy city-builder puzzle (F2P, age 18-35)
+
+=== WHAT THE SKILL DID WELL ===
+
+1. STRUCTURE IS EXCELLENT
+   The skill defines a thorough 10-section template covering every dimension a
+   marketing team needs: game overview, target player, monetization, launch phase,
+   competitive landscape, performance targets, store presence, UA channels, brand
+   voice, and proof points. Nothing obviously missing from a professional mobile
+   game marketing context doc.
+
+2. GENRE TAXONOMY IS GENUINELY USEFUL
+   The explicit genre taxonomy (hyper-casual → casual → mid-core → hardcore) with
+   CPI benchmark ranges is a strong addition. It forces the user to pick a
+   classification that directly affects downstream UA budget expectations and
+   creative strategy. For this game (casual-to-mid-core hybrid), the taxonomy
+   helped clarify the dual positioning challenge.
+
+3. LAUNCH PHASE TABLE IS PRACTICAL
+   The phase definitions (pre-launch / closed beta / open beta / soft launch /
+   global launch) are precise and match industry standard nomenclature. The
+   per-phase follow-up questions (KPI gates, regions, start dates) are exactly what
+   a UA or growth manager would ask.
+
+4. MONETIZATION PHILOSOPHY FIELD IS A DIFFERENTIATOR
+   "Soft monetization vs. whale-friendly vs. balanced" is a subtle but important
+   field. It correctly signals to downstream skills (creative, ASO, UA) what
+   audience to optimize for. Most context templates omit this.
+
+5. PLAYER ARCHETYPE TABLE FORMAT
+   The 3-column archetype table (who they are / why they play) produces useful,
+   structured output rather than prose blobs. Easy for creative briefs to consume.
+
+6. TIPS SECTION IN SKILL IS HIGH QUALITY
+   The tips at the bottom of the skill file (core loop is most important, genre
+   affects CPI, push for numbers, soft launch means some sections are empty) would
+   meaningfully guide an interactive session. They reflect real mobile game
+   marketing expertise.
+
+7. CLEAR SAVE PATH
+   The skill specifies `.agents/game-marketing-context.md` as the canonical path,
+   which enables cross-skill interoperability. This is the right pattern.
+
+=== GAPS AND AREAS FOR IMPROVEMENT ===
+
+1. NO WORKING TITLE GUIDANCE
+   The skill asks for "Full title" but gives no guidance for pre-launch games that
+   don't have a finalized name. It should explicitly say: "If the title isn't
+   finalized, use a working title and mark it as such." This eval had to invent a
+   placeholder name ("Kingdom Puzzles").
+
+2. COMPETITIVE LANDSCAPE REQUIRES DOMAIN KNOWLEDGE
+   The skill asks for top 2–3 competitors but gives no scaffolding for users who
+   don't know the market well. A brief note pointing to the top charts in relevant
+   subcategories (e.g., "check App Store Top Charts > Games > Strategy for direct
+   comps") would help less experienced users. In an automated eval, this required
+   assumption-heavy guessing.
+
+3. UA CHANNEL LIST IS SLIGHTLY DATED / INCOMPLETE
+   The channel list includes Vungle (now acquired by Liftoff and rebranded as
+   Liftoff Creative Studio) and IronSource (merged into Unity LevelPlay). The
+   skill's list should reflect current industry naming. Also missing: Mintegral,
+   Digital Turbine, and Chartboost — all meaningfully used for casual/mid-core.
+
+4. NO SOFT LAUNCH MARKET GUIDANCE
+   The soft launch section mentions "typically CA, AU, NZ, Nordics, or MENA" but
+   doesn't explain the tradeoffs between these options (e.g., CA/AU for English-
+   language retention baseline; Nordics for high-ARPU benchmark; MENA for lower
+   CPI with reasonable quality). A brief rationale would help users make an
+   informed choice rather than defaulting to "CA + AU."
+
+5. MISSING: CORE LOOP ARTICULATION EXERCISE
+   The tips say "core loop is the most important field" but the skill doesn't
+   provide a structured exercise to help users who struggle to articulate it. A
+   simple template like "[Player does X] → [earns/unlocks Y] → [returns to do X
+   again because Z]" would help produce better core loop descriptions.
+
+6. PERFORMANCE TARGETS: NO BENCHMARK CONTEXT
+   The metrics table captures targets but doesn't give the user any reference
+   benchmarks to calibrate against. For a first-time publisher, "what is a good D7
+   retention?" is unknown. The skill should include a reference row or a footnote
+   like "Industry median for casual puzzle: D1 ~40%, D7 ~20%, D30 ~8%." This eval
+   had to inject assumed benchmarks without grounding.
+
+7. BRAND VOICE SECTION IS THIN
+   The 3–5 adjectives approach is adequate but could be stronger. Adding a "voice
+   examples" field — 1–2 example taglines or copy phrases that feel on-brand — would
+   make the document more immediately useful for copywriters and creative teams.
+
+8. NO VERSION/CHANGELOG GUIDANCE
+   The skill saves the doc with a "last updated" date but doesn't specify how to
+   handle version history (e.g., what changed between V1 and V2). For a living
+   document shared across teams, a lightweight changelog section would be valuable.
+
+=== OVERALL ASSESSMENT ===
+
+Strong skill. Well-structured, covers all the right domains, and uses concrete
+industry terminology throughout. The document it produces is genuinely useful as a
+shared reference for UA, ASO, creative, and live ops work. The main gaps are around
+scaffolding for less-experienced users (benchmark numbers, competitive research
+guidance, core loop templates) and minor staleness in the UA channel list. These are
+refinements, not fundamental flaws. Rating: 8/10.

@@ -1,0 +1,101 @@
+EVAL NOTES — eval-2-live-game-autodraft / with_skill
+Date: 2026-04-30
+Skill: game-marketing-context v1.0.0
+Task: Auto-draft game-marketing-context.md from a live Google Play listing
+
+=============================================================
+SKILL EXECUTION SUMMARY
+=============================================================
+
+Step followed: Auto-draft workflow (Step 2, auto-draft path)
+1. Read SKILL.md — full skill loaded successfully
+2. Checked for existing .agents/game-marketing-context.md — none present
+3. Fetched Google Play listing via WebFetch
+4. Drafted all 10 sections from available data + provided hints
+5. Saved output to specified eval path (not .agents/ as per eval override)
+
+=============================================================
+DATA AVAILABILITY FROM FETCH
+=============================================================
+
+Google Play page is client-side rendered (JavaScript-heavy). WebFetch
+returned only the following confirmed fields:
+
+  CONFIRMED FROM FETCH:
+  - Title: LUTA: Luminoria Tactics
+  - Developer: HonStudios
+  - Monetization: includes IAPs (confirmed)
+  - Content rating: PEGI 12
+  - Install count: 100+ downloads
+
+  CONFIRMED FROM USER (pre-provided):
+  - Launch status: Global launch
+  - Game type: tactical game (implied by title + user description)
+
+  NOT RETURNED (client-side rendering limitation):
+  - Full description / feature list
+  - Store rating and review count
+  - Screenshot descriptions
+  - Recent update changelog
+  - IAP price points or categories
+  - Review quotes
+
+=============================================================
+SKILL BEHAVIOR OBSERVATIONS
+=============================================================
+
+STRENGTHS:
++ Skill correctly identifies the auto-draft path as the recommended workflow
++ Section structure is comprehensive (10 sections, all present in output)
++ Skill guidance on not fabricating KPI targets was followed correctly —
+  all performance metrics are marked [NEEDS INPUT] with no invented numbers
++ Launch status correctly set to "Global launch" per user instruction
++ Inferences were made conservatively and labeled as such (e.g., "inferred
+  from title" for Luminoria fantasy setting)
++ Suggested competitor list included as a prompt, not stated as fact
++ Player archetypes table seeded with reasonable mid-core tactical game
+  archetypes, flagged as requiring confirmation
++ The document is immediately usable as a starting point — team can fill
+  in gaps without re-architecting the doc
+
+GAPS / IMPROVEMENT AREAS:
+- Core loop is entirely blank — skill tips note this is the most critical
+  field. Without a description or gameplay video to analyze, it can't be
+  inferred from a store listing alone. The skill should probably push
+  harder for this field before saving.
+- Genre taxonomy: "Tactical RPG / mid-core" is a reasonable inference but
+  could be wrong (e.g., it could be auto-battler or real-time tactics).
+  Marked for confirmation.
+- No brand voice could be inferred from a truncated listing — all 5 brand
+  adjectives are [NEEDS INPUT].
+- UA & channel strategy section is entirely empty — expected for a 100+
+  install early-launch game, but worth noting.
+- The skill saves to .agents/game-marketing-context.md by default. This
+  eval overrides the save path to the eval output directory. In production
+  use, the skill's default path is correct.
+
+DATA FABRICATION CHECK:
+- No CPI targets invented: PASS
+- No retention numbers invented: PASS
+- No revenue figures invented: PASS
+- No competitor names stated as definitive: PASS (framed as suggestions)
+- No store rating invented: PASS
+
+=============================================================
+OVERALL ASSESSMENT
+=============================================================
+
+The skill executed the auto-draft workflow correctly given very limited
+source data. The output is a valid, usable V1 context document — not a
+complete one, but appropriately skeletal given a 100+ install early-launch
+game with a CSR-blocked store page.
+
+A human reviewer would be able to fill in the [NEEDS INPUT] fields in
+approximately 15–20 minutes, which is much faster than starting from scratch.
+
+The skill's instruction to "present the draft and ask what's wrong or
+missing" is the correct next step in a live session. This eval simulates
+the one-shot auto-draft; in real use the user would be prompted to correct
+and fill gaps interactively.
+
+Verdict: SKILL BEHAVED CORRECTLY for this scenario.

@@ -1,0 +1,51 @@
+{
+  "run_id": "eval-2-without_skill",
+  "expectations": [
+    {
+      "text": "Game title correctly identified as LUTA: Luminoria Tactics or Luminoria Tactics",
+      "passed": true,
+      "evidence": "Document header and Product Identity table both list 'LUTA: Luminoria Tactics' exactly."
+    },
+    {
+      "text": "Genre classified as mid-core or tactical/strategy with session length benchmark referenced (15–30 min)",
+      "passed": false,
+      "evidence": "Genre is correctly 'Tactical / Strategy RPG', but session length is listed as '10–30 min' (line 57), not the 15–30 min mid-core benchmark. Lower bound is off by 5 minutes."
+    },
+    {
+      "text": "Mid-core D1 retention benchmark referenced (25–35%), NOT the casual range (35–45%)",
+      "passed": false,
+      "evidence": "KPI table (line 160) lists Day-1 Retention as '35–45%' labelled 'Benchmark for tactical RPG genre' — this is the casual game range, not the correct mid-core range of 25–35%."
+    },
+    {
+      "text": "Core loop is written using the action→reward→progression→loop structure, even if flagged as assumption",
+      "passed": false,
+      "evidence": "No core loop section exists in the document. Section 11 lists 'What is the core game loop?' as an open question for the studio, meaning it was never drafted."
+    },
+    {
+      "text": "ROAS targets include a time window (D7, D30, or D90) — not just 'good ROAS'",
+      "passed": false,
+      "evidence": "No ROAS targets appear anywhere in the document. The KPI table covers installs, rating, retention, and IAP conversion only — ROAS is entirely absent."
+    },
+    {
+      "text": "iOS measurement section mentions ATT, SKAdNetwork, or the ~25–35% opt-in rate limitation",
+      "passed": false,
+      "evidence": "The document is scoped entirely to Android/Google Play. There is no iOS measurement section and no mention of ATT, SKAdNetwork, or opt-in rates anywhere."
+    },
+    {
+      "text": "UA channels do not list IronSource as a standalone network or Vungle (outdated names)",
+      "passed": true,
+      "evidence": "Paid UA channels listed are 'Google UAC (primary), Meta Ads (secondary), TikTok Ads' (line 123). IronSource and Vungle do not appear anywhere in the document."
+    },
+    {
+      "text": "All unknown KPIs are marked [NEEDS INPUT] or [ASSUMPTION] — not fabricated as facts",
+      "passed": false,
+      "evidence": "KPI table states D1 Retention '35–45%' and D7 Retention '15–25%' as plain benchmark figures with no [NEEDS INPUT] or [ASSUMPTION] tags. These are unknown for this specific game and should be flagged. Other fields use informal qualifiers like 'confirm with studio' but the KPI table itself contains no structured uncertainty markers."
+    }
+  ],
+  "summary": {
+    "pass_rate": 0.25,
+    "passed": 2,
+    "failed": 6,
+    "total": 8
+  }
+}

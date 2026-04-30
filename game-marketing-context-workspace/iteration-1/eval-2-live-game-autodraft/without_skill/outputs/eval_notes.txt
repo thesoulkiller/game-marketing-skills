@@ -1,0 +1,57 @@
+EVAL NOTES — Baseline (no skill)
+Task: Auto-draft game marketing context from Google Play listing
+Date: 2026-04-30
+Model: claude-sonnet-4-6
+
+=== DATA RETRIEVAL ===
+
+WebFetch result: PARTIAL
+- Successfully confirmed: game title (LUTA: Luminoria Tactics), developer (HonStudios), content rating (PEGI 12), IAPs (yes), installs (100+)
+- NOT returned: full description, rating, review count, last updated, screenshots info, file size, OS requirements, pricing details
+- Root cause: Google Play pages are JavaScript-rendered; WebFetch retrieves a limited static snapshot. This is a known limitation for Play Store pages.
+
+=== APPROACH TAKEN ===
+
+Worked with confirmed data + genre inference based on:
+- "Tactics" in title → tactical/strategy RPG genre
+- "Luminoria" → original fantasy IP
+- "LUTA" acronym → branding intent
+- PEGI 12 → appropriate for mid-core strategy audience
+- IAPs present → F2P or freemium model (type unconfirmed)
+- 100+ installs → very early post-launch, global launch confirmed
+
+=== DOCUMENT QUALITY ASSESSMENT ===
+
+Strengths:
+- Covered all standard marketing context sections (identity, audience, genre, monetization, store, channels, messaging, gaps)
+- Explicit gap flagging throughout — evaluator can see exactly what's inferred vs. confirmed
+- Gave actionable draft UVPs and messaging pillars despite limited data
+- Monetization model handled honestly with a comparison table rather than guessing
+- Channel recommendations are appropriate for early-stage global launch
+
+Weaknesses / Limitations:
+- No confirmed game description means genre/gameplay loop is entirely inferred
+- No rating or review data → social proof section is empty
+- Competitive set is generic (class-level, not differentiated)
+- Messaging pillars are hypothetical and require developer validation
+- No iOS data; cross-platform strategy section is missing
+- No creative examples or existing brand assets to work from
+
+=== GAPS THAT WOULD IMPROVE OUTPUT ===
+
+1. Full game description (highest value — unlocks accurate positioning)
+2. Screenshot content / trailer (enables store page CRO analysis)
+3. Monetization model confirmation (IAP type, price points)
+4. Developer-provided product brief or existing marketing materials
+5. iOS App Store link if available
+
+=== BASELINE BEHAVIOR NOTES ===
+
+- No skill was used. Document structure was generated from general knowledge of mobile game marketing frameworks.
+- The output covers roughly what a mobile UA/ASO consultant would produce as a "discovery brief" in the absence of a product brief.
+- A skill with a defined template and explicit prompts for each section would likely produce more consistent structure and more precise gap flagging.
+- This baseline produces a usable document but requires significant developer input to become campaign-ready.
+
+=== FILE OUTPUT ===
+game-marketing-context.md — primary output, ~400 lines
+eval_notes.txt — this file

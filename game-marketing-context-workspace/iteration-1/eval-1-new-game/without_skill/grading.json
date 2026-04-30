@@ -1,0 +1,35 @@
+{
+  "run_id": "eval-1-without_skill",
+  "expectations": [
+    {
+      "text": "Creates a game-marketing-context.md output file",
+      "passed": true,
+      "evidence": "File exists at the specified path with full marketing context content (194 lines)."
+    },
+    {
+      "text": "Launch status is set to pre-launch (not soft launch or global)",
+      "passed": true,
+      "evidence": "\"Current Stage: Pre-launch — 3 months to soft launch\" — current stage is explicitly pre-launch; soft launch is listed only as a future target date."
+    },
+    {
+      "text": "Includes genre classification from the taxonomy (casual, mid-core, or hybrid)",
+      "passed": true,
+      "evidence": "\"The game fuses two proven casual/mid-core genres\" and \"This hybrid gives players two hooks\" — classified as hybrid casual/mid-core."
+    },
+    {
+      "text": "Monetization model section is present and identifies F2P + IAP",
+      "passed": true,
+      "evidence": "\"Business Model: Free-to-play (F2P)\" and \"Monetization: In-app purchases (IAP) — likely gems/currency, battle passes, cosmetics, city skins, speed-ups\""
+    },
+    {
+      "text": "Does not fabricate specific KPI numbers without flagging them as assumptions",
+      "passed": true,
+      "evidence": "KPI numbers are presented as targets (\"target >3:1 at 180 days\", \"target: >25%\"), the pre-reg goal is labeled \"aspirational benchmark,\" and the Assumptions section explicitly flags monetization model and other details as assumed. No KPI actuals are presented as measured facts."
+    },
+    {
+      "text": "Core loop is described specifically (puzzle battles + city building), not just 'gameplay'",
+      "passed": true,
+      "evidence": "\"City-builder loop: persistent base that grows over time, visual progression, resource management\" and \"Puzzle battle loop: skill-based matches that feel rewarding, not purely luck-based\" — both loops named and described distinctly."
+    }
+  ]
+}

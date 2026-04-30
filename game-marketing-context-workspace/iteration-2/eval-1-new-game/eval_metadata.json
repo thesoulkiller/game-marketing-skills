@@ -1,0 +1,16 @@
+{
+  "eval_id": 1,
+  "eval_name": "new-pre-launch-game",
+  "prompt": "I'm building a new mobile game — a fantasy city-builder where you grow a kingdom by completing puzzle battles. It's free-to-play, targeting casual to mid-core players, age 18-35. We're not on the stores yet, still 3 months from soft launch. Help me set up my game marketing context.",
+  "assertions": [
+    { "text": "Core loop uses the action→reward→progression→loop structure, not just a vague description" },
+    { "text": "Genre is classified using the taxonomy table with session length referenced" },
+    { "text": "Genre-appropriate D1 retention target is present (35–45% for casual, 25–35% for mid-core) — not a made-up number outside these ranges" },
+    { "text": "Genre-appropriate CPI benchmark range is referenced (e.g., $1.00–2.50 for casual or $1.50–4.00 for mid-core US)" },
+    { "text": "Soft launch market selection includes CA, AU, or NZ with at least one reason why (English-speaking, iOS-heavy, or GDPR-free)" },
+    { "text": "UA channel list uses current network names: Unity LevelPlay (not IronSource) and Liftoff (not Vungle)" },
+    { "text": "Attribution tool field is present and flagged as required before paid UA" },
+    { "text": "Monetization philosophy field is present (whale-friendly / soft monetization / balanced)" },
+    { "text": "Fabricated KPI numbers are explicitly flagged as assumptions or genre benchmarks, not stated as facts" }
+  ]
+}

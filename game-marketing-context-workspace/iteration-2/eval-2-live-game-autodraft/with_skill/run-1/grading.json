@@ -1,0 +1,51 @@
+{
+  "run_id": "eval-2-with_skill",
+  "expectations": [
+    {
+      "text": "Game title correctly identified as LUTA: Luminoria Tactics or Luminoria Tactics",
+      "passed": true,
+      "evidence": "Line 11: '**Title:** LUTA: Luminoria Tactics' — exact match to full game title."
+    },
+    {
+      "text": "Genre classified as mid-core or tactical/strategy with session length benchmark referenced (15–30 min)",
+      "passed": true,
+      "evidence": "Line 13: 'Strategy / Tactical RPG (mid-core)'. Line 33: '[ASSUMPTION] 15–30 min sessions, 1–3x per day' — session length benchmark present."
+    },
+    {
+      "text": "Mid-core D1 retention benchmark referenced (25–35%), NOT the casual range (35–45%)",
+      "passed": true,
+      "evidence": "Line 104: 'D1 retention | ≥ 25% [ASSUMPTION — mid-core benchmark]' — uses mid-core floor of 25%, not the casual range of 35–45%."
+    },
+    {
+      "text": "Core loop is written using the action→reward→progression→loop structure, even if flagged as assumption",
+      "passed": true,
+      "evidence": "Line 15: 'Player deploys units on a tactical grid → executes turn-based combat against enemy waves → earns XP and loot → upgrades heroes/units → which unlocks harder missions and new tactical options, repeating every 10–20 minutes.' Explicit arrow-chain structure and flagged [ASSUMPTION]."
+    },
+    {
+      "text": "ROAS targets include a time window (D7, D30, or D90) — not just 'good ROAS'",
+      "passed": true,
+      "evidence": "Lines 107–109 list D7 ROAS (≥10%), D30 ROAS (≥30–40%), and D90 ROAS (≥80–100%) as distinct rows. Line 113 further explains D7/D30/D90 payback windows."
+    },
+    {
+      "text": "iOS measurement section mentions ATT, SKAdNetwork, or the ~25–35% opt-in rate limitation",
+      "passed": true,
+      "evidence": "Line 117: 'ATT opt-in rate averages 25–35%; expect SKAdNetwork (SKAN) aggregated, delayed, non-user-level data for the majority of iOS installs.' All three elements present."
+    },
+    {
+      "text": "UA channels do not list IronSource as a standalone network or Vungle (outdated names)",
+      "passed": true,
+      "evidence": "Line 138 lists 'Unity LevelPlay (formerly IronSource — merged 2023)' and 'Liftoff (formerly Vungle — rebranded 2023)' — current brand names used as primary labels; legacy names appear only as historical parentheticals, not as standalone network names."
+    },
+    {
+      "text": "All unknown KPIs are marked [NEEDS INPUT] or [ASSUMPTION] — not fabricated as facts",
+      "passed": true,
+      "evidence": "All unknown values throughout the document consistently use [NEEDS INPUT] or [ASSUMPTION] tags (e.g., ARPDAU, ARPPU, store rating, IAP price points, competitor details). No KPI values are stated as confirmed facts without a source or explicit tag."
+    }
+  ],
+  "summary": {
+    "pass_rate": 1.0,
+    "passed": 8,
+    "failed": 0,
+    "total": 8
+  }
+}

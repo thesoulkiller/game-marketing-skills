@@ -1,0 +1,15 @@
+{
+  "eval_id": 2,
+  "eval_name": "live-game-autodraft-luminoria",
+  "prompt": "Here's my game on Google Play: https://play.google.com/store/apps/details?id=com.HonStudios.LuminoriaTactics&hl=en — can you auto-draft a game marketing context doc from this listing? The game is in global launch now.",
+  "assertions": [
+    { "text": "Game title correctly identified as LUTA: Luminoria Tactics or Luminoria Tactics" },
+    { "text": "Genre classified as mid-core or tactical/strategy with session length benchmark referenced (15–30 min)" },
+    { "text": "Mid-core D1 retention benchmark referenced (25–35%), NOT the casual range (35–45%)" },
+    { "text": "Core loop is written using the action→reward→progression→loop structure, even if speculative and flagged as assumption" },
+    { "text": "ROAS targets include a time window (D7, D30, or D90) — not just 'good ROAS'" },
+    { "text": "iOS measurement section mentions ATT, SKAdNetwork, or the ~25–35% opt-in rate limitation" },
+    { "text": "UA channels do not list IronSource as a standalone network or Vungle (outdated names)" },
+    { "text": "All unknown KPIs are marked [NEEDS INPUT] or [ASSUMPTION] — not fabricated as facts" }
+  ]
+}

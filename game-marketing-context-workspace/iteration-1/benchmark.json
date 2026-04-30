@@ -1,0 +1,363 @@
+{
+  "metadata": {
+    "skill_name": "game-marketing-context",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-04-30T11:59:27Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 156.5,
+        "tokens": 28286,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Creates a game-marketing-context.md output file",
+          "passed": true,
+          "evidence": "File exists at outputs/game-marketing-context.md with full content (156 lines, all sections populated)"
+        },
+        {
+          "text": "Launch status is set to pre-launch (not soft launch or global)",
+          "passed": true,
+          "evidence": "\"**Current phase:** Pre-launch\" \u2014 soft launch and global launch are listed as future targets, not current status"
+        },
+        {
+          "text": "Includes genre classification from the taxonomy (casual, mid-core, or hybrid)",
+          "passed": true,
+          "evidence": "\"**Genre / Sub-genre:** Strategy / Simulation hybrid with Puzzle combat \u2014 Casual to Mid-core\" and \"**Player type:** Casual / Mid-core (dual audience)\""
+        },
+        {
+          "text": "Monetization model section is present and identifies F2P + IAP",
+          "passed": true,
+          "evidence": "\"**Model type:** Free-to-play (F2P) + IAP\" under the Monetization Model section"
+        },
+        {
+          "text": "Does not fabricate specific KPI numbers without flagging them as assumptions",
+          "passed": true,
+          "evidence": "KPI targets are flagged: \"*(assumed targets \u2014 adjust based on your monetization benchmarks)*\" and \"*All targets are assumed benchmarks for casual-to-mid-core F2P puzzle/strategy hybrids.*\""
+        },
+        {
+          "text": "Core loop is described specifically (puzzle battles + city building), not just 'gameplay'",
+          "passed": true,
+          "evidence": "\"Player draws a puzzle battle card \u2192 completes a match-3 or logic puzzle in 60\u201390 seconds \u2192 earns resources \u2192 spends resources to build/upgrade kingdom structures \u2192 unlocks the next puzzle battle\""
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 106.8,
+        "tokens": 28379,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Creates a game-marketing-context.md output file",
+          "passed": true,
+          "evidence": "File exists at outputs/game-marketing-context.md with full structured content"
+        },
+        {
+          "text": "Game title is correctly identified as LUTA: Luminoria Tactics (or Luminoria Tactics)",
+          "passed": true,
+          "evidence": "**Title:** LUTA: Luminoria Tactics"
+        },
+        {
+          "text": "Developer is identified as HonStudios",
+          "passed": true,
+          "evidence": "Auto-drafted from Google Play listing: https://play.google.com/store/apps/details?id=com.HonStudios.LuminoriaTactics \u2014 developer inferred from package ID; also referenced in footer as 'HonStudios'"
+        },
+        {
+          "text": "Launch status is set to global launch",
+          "passed": true,
+          "evidence": "**Current phase:** Global launch"
+        },
+        {
+          "text": "Genre reflects tactical/strategy positioning (not casual or hyper-casual)",
+          "passed": true,
+          "evidence": "**Genre / Sub-genre:** Strategy / Tactical RPG (mid-core)"
+        },
+        {
+          "text": "IAP presence is noted (listing confirms in-app purchases available)",
+          "passed": true,
+          "evidence": "**Model type:** F2P (free-to-play) + IAP (confirmed via Play Store listing)"
+        },
+        {
+          "text": "Flags missing data (KPI targets, UA channels, retention actuals) rather than fabricating them",
+          "passed": true,
+          "evidence": "All KPI metric fields marked [NEEDS INPUT]; UA channels section states [NEEDS INPUT: Meta, Google UAC, TikTok...]; footer note: 'No KPI targets or actuals were available from the store listing. All metrics require direct input from the team.'"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 121.2,
+        "tokens": 31130,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Reads existing context file before making changes (check if existing file was created and updated file differs from it)",
+          "passed": true,
+          "evidence": "existing-game-marketing-context.md exists with original content dated 2026-02-15; updated file differs in multiple sections (age range, metrics table, added UA notes paragraph) confirming the existing file was read before changes were made"
+        },
+        {
+          "text": "Updates CPI actuals: US $1.80 and Germany $0.95",
+          "passed": true,
+          "evidence": "Line 72: 'CPI (US) | $1.50 | $1.80 \u26a0 above target \u2014 Meta campaign, April 2026'; Line 73: 'CPI (DE) | $1.00 | $0.95 \u2014 Meta campaign, April 2026'"
+        },
+        {
+          "text": "Notes D7 retention actual (18%) vs target (22%) gap",
+          "passed": true,
+          "evidence": "Line 76: 'D7 retention | 22% | 18% \u26a0 below target \u2014 April 2026'; UA notes paragraph also states 'D7 retention at 18% is 4 points below the 22% KPI gate'"
+        },
+        {
+          "text": "Updates target player age range to 25-40 (not 18-35)",
+          "passed": true,
+          "evidence": "Line 15: '**Primary age range:** 25\u201340 *(updated from 18\u201335 based on first UA campaign data, April 2026)*'"
+        },
+        {
+          "text": "Does not rewrite unrelated sections (monetization, store presence, brand voice should be essentially unchanged)",
+          "passed": true,
+          "evidence": "Monetization Model section (lines 33-43), Store Presence section (lines 82-88), and Brand Voice & Tone section (lines 102-106) are word-for-word identical between existing and updated files"
+        },
+        {
+          "text": "Confirms or summarizes what changed",
+          "passed": true,
+          "evidence": "Line 81 adds: '**UA notes (April 2026):** First Meta campaign data in. US CPI came in at $1.80 (20% above the $1.50 gate) \u2014 needs creative or audience optimisation before global. DE CPI of $0.95 is on-target and a bright spot. D7 retention at 18% is 4 points below the 22% KPI gate; retention improvement work required before global launch.'"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 119.9,
+        "tokens": 23897,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Creates a game-marketing-context.md output file",
+          "passed": true,
+          "evidence": "File exists at the specified path with full marketing context content (194 lines)."
+        },
+        {
+          "text": "Launch status is set to pre-launch (not soft launch or global)",
+          "passed": true,
+          "evidence": "\"Current Stage: Pre-launch \u2014 3 months to soft launch\" \u2014 current stage is explicitly pre-launch; soft launch is listed only as a future target date."
+        },
+        {
+          "text": "Includes genre classification from the taxonomy (casual, mid-core, or hybrid)",
+          "passed": true,
+          "evidence": "\"The game fuses two proven casual/mid-core genres\" and \"This hybrid gives players two hooks\" \u2014 classified as hybrid casual/mid-core."
+        },
+        {
+          "text": "Monetization model section is present and identifies F2P + IAP",
+          "passed": true,
+          "evidence": "\"Business Model: Free-to-play (F2P)\" and \"Monetization: In-app purchases (IAP) \u2014 likely gems/currency, battle passes, cosmetics, city skins, speed-ups\""
+        },
+        {
+          "text": "Does not fabricate specific KPI numbers without flagging them as assumptions",
+          "passed": true,
+          "evidence": "KPI numbers are presented as targets (\"target >3:1 at 180 days\", \"target: >25%\"), the pre-reg goal is labeled \"aspirational benchmark,\" and the Assumptions section explicitly flags monetization model and other details as assumed. No KPI actuals are presented as measured facts."
+        },
+        {
+          "text": "Core loop is described specifically (puzzle battles + city building), not just 'gameplay'",
+          "passed": true,
+          "evidence": "\"City-builder loop: persistent base that grows over time, visual progression, resource management\" and \"Puzzle battle loop: skill-based matches that feel rewarding, not purely luck-based\" \u2014 both loops named and described distinctly."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 106.6,
+        "tokens": 24542,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Creates a game-marketing-context.md output file",
+          "passed": true,
+          "evidence": "File exists at outputs/game-marketing-context.md and contains a fully structured marketing context document."
+        },
+        {
+          "text": "Game title is correctly identified as LUTA: Luminoria Tactics (or Luminoria Tactics)",
+          "passed": true,
+          "evidence": "Header reads '# Game Marketing Context: LUTA: Luminoria Tactics' and the identity table shows Title: 'LUTA: Luminoria Tactics'."
+        },
+        {
+          "text": "Developer is identified as HonStudios",
+          "passed": true,
+          "evidence": "Identity table row: Developer | HonStudios. Also present in the source URL: com.HonStudios.LuminoriaTactics."
+        },
+        {
+          "text": "Launch status is set to global launch",
+          "passed": true,
+          "evidence": "Header line 'Status: Global Launch' and identity table row: Launch status | 'Global launch (confirmed)'."
+        },
+        {
+          "text": "Genre reflects tactical/strategy positioning (not casual or hyper-casual)",
+          "passed": true,
+          "evidence": "Section 2 states 'Primary genre: Tactical / Strategy (turn-based implied by \"Tactics\" in title)' with competitive set referencing Fire Emblem Heroes, Tactics Ogre \u2014 explicitly mid-core/core positioning."
+        },
+        {
+          "text": "IAP presence is noted (listing confirms in-app purchases available)",
+          "passed": true,
+          "evidence": "Identity table row: In-app purchases | Yes. Section 5 header also states 'Confirmed: In-app purchases present'."
+        },
+        {
+          "text": "Flags missing data (KPI targets, UA channels, retention actuals) rather than fabricating them",
+          "passed": true,
+          "evidence": "Section 9 'Key Data Gaps' table explicitly lists 'Current DAU / MAU / retention' as a gap (MEDIUM priority). Multiple inline GAP callouts appear throughout (e.g., monetization model unconfirmed, rating/reviews unknown). UA channel recommendations are framed as 'once monetization confirmed' rather than stated as actuals. No KPI targets are invented."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 6,
+        "failed": 0,
+        "total": 6,
+        "time_seconds": 83.0,
+        "tokens": 24541,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Reads existing context file before making changes (check if existing file was created and updated file differs from it)",
+          "passed": true,
+          "evidence": "existing-game-marketing-context.md exists (78 lines, original content). Updated game-marketing-context.md differs substantially \u2014 95 lines, new CPI actuals columns, retention actuals column, Campaign History section, and revised age range. File was clearly read and then updated rather than created from scratch."
+        },
+        {
+          "text": "Updates CPI actuals: US $1.80 and Germany $0.95",
+          "passed": true,
+          "evidence": "Updated file CPI table includes: '| US | $1.50 | $1.80 | Over target \u2014 optimize |' and '| DE | $1.00 | $0.95 | On target \u2014 scale |'"
+        },
+        {
+          "text": "Notes D7 retention actual (18%) vs target (22%) gap",
+          "passed": true,
+          "evidence": "Retention table shows '| D7 | 22% | 18% | Below target (-4pp) |' and notes section states 'D7 at 18% is 4 percentage points below the 22% target.'"
+        },
+        {
+          "text": "Updates target player age range to 25-40 (not 18-35)",
+          "passed": true,
+          "evidence": "Updated file shows '**Age Range**: 25\u201340 *(updated from 18\u201335 \u2014 first campaign data shows primary skew is 25\u201340)*'"
+        },
+        {
+          "text": "Does not rewrite unrelated sections (monetization, store presence, brand voice should be essentially unchanged)",
+          "passed": true,
+          "evidence": "Monetization line in Product Overview is identical. UA Channels, Messaging Pillars, and Localization Notes sections are word-for-word unchanged between files. Creative Strategy gained one line about audience refinement but core content is preserved. No brand voice or store presence sections existed to be rewritten."
+        },
+        {
+          "text": "Confirms or summarizes what changed",
+          "passed": true,
+          "evidence": "A 'Campaign History' table was added summarizing Wave 1 findings: 'US CPI $1.80 (over); DE CPI $0.95 (on target); D7 retention 18% (below 22% target); audience skews 25\u201340 male'. Open Questions checkmarks also explicitly confirm what was validated."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 128.1667,
+        "stddev": 25.5719,
+        "min": 106.8,
+        "max": 156.5
+      },
+      "tokens": {
+        "mean": 29265.0,
+        "stddev": 1615.8066,
+        "min": 28286,
+        "max": 31130
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 103.1667,
+        "stddev": 18.6881,
+        "min": 83.0,
+        "max": 119.9
+      },
+      "tokens": {
+        "mean": 24326.6667,
+        "stddev": 372.1026,
+        "min": 23897,
+        "max": 24542
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.00",
+      "time_seconds": "+25.0",
+      "tokens": "+4938"
+    }
+  },
+  "notes": []
+}

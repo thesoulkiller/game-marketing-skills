@@ -1,0 +1,42 @@
+EVAL NOTES — eval-3-context-update / without_skill
+Date: 2026-04-30
+
+TASK
+Update an existing game-marketing-context.md with first UA campaign data:
+- US CPI: $1.80 (was target $1.50)
+- DE CPI: $0.95 (was target $1.00)
+- D7 retention: 18% (was target 22%)
+- Audience age skew revised: 25-40 male (was 18-35)
+
+APPROACH (baseline, no skill)
+- Created a realistic existing-game-marketing-context.md as the starting state
+- Read the file, then made targeted, surgical updates
+- Did not rewrite sections that had no new data (Creative Strategy, Messaging Pillars, Channels, Localization)
+
+CHANGES MADE
+1. Target Audience — age range updated from 18-35 to 25-40, note added citing campaign data as source
+2. CPI table — added Actual CPI column and Status column; added wave-1 notes below table
+3. Retention table — added Actual column; flagged D7 miss; added action-oriented notes
+4. Creative Strategy — added one line about audience refinement for 25-40 male framing
+5. Open Questions — checked off validated assumptions; added two new questions arising from the data
+6. Campaign History — added new section to log waves over time (future-proofing)
+
+QUALITY ASSESSMENT
+Strengths:
+- Changes are traceable: original targets preserved alongside actuals
+- Actionable notes added (not just data recording — what to do next)
+- Open questions updated to reflect what was learned and what is still unknown
+- Campaign history section added proactively as a useful persistent record
+
+Weaknesses / gaps vs. skill-guided approach:
+- No structured diff / change log beyond the Campaign History table
+- Did not use any standardized templating or naming conventions a skill might enforce
+- "Wave 1" labeling is ad hoc — a skill would likely enforce a consistent versioning format
+- No explicit flags for downstream stakeholders (e.g., "alert: D7 miss may affect D30 ROAS projection")
+- Did not prompt user to review whether D30 ROAS target should be revised given D7 miss
+
+TIMING
+Estimated time: single-pass, ~2 minutes equivalent. No iteration required.
+
+VERDICT
+Competent update for a general assistant. Captured all four data points, preserved context, and added forward-looking notes. Misses the structured, cross-referenced rigor a purpose-built skill would provide (e.g., automatic impact propagation to ROAS projections, standardized change provenance, stakeholder diff summaries).

@@ -1,0 +1,40 @@
+{
+  "run_id": "eval-2-without_skill",
+  "expectations": [
+    {
+      "text": "Creates a game-marketing-context.md output file",
+      "passed": true,
+      "evidence": "File exists at outputs/game-marketing-context.md and contains a fully structured marketing context document."
+    },
+    {
+      "text": "Game title is correctly identified as LUTA: Luminoria Tactics (or Luminoria Tactics)",
+      "passed": true,
+      "evidence": "Header reads '# Game Marketing Context: LUTA: Luminoria Tactics' and the identity table shows Title: 'LUTA: Luminoria Tactics'."
+    },
+    {
+      "text": "Developer is identified as HonStudios",
+      "passed": true,
+      "evidence": "Identity table row: Developer | HonStudios. Also present in the source URL: com.HonStudios.LuminoriaTactics."
+    },
+    {
+      "text": "Launch status is set to global launch",
+      "passed": true,
+      "evidence": "Header line 'Status: Global Launch' and identity table row: Launch status | 'Global launch (confirmed)'."
+    },
+    {
+      "text": "Genre reflects tactical/strategy positioning (not casual or hyper-casual)",
+      "passed": true,
+      "evidence": "Section 2 states 'Primary genre: Tactical / Strategy (turn-based implied by \"Tactics\" in title)' with competitive set referencing Fire Emblem Heroes, Tactics Ogre — explicitly mid-core/core positioning."
+    },
+    {
+      "text": "IAP presence is noted (listing confirms in-app purchases available)",
+      "passed": true,
+      "evidence": "Identity table row: In-app purchases | Yes. Section 5 header also states 'Confirmed: In-app purchases present'."
+    },
+    {
+      "text": "Flags missing data (KPI targets, UA channels, retention actuals) rather than fabricating them",
+      "passed": true,
+      "evidence": "Section 9 'Key Data Gaps' table explicitly lists 'Current DAU / MAU / retention' as a gap (MEDIUM priority). Multiple inline GAP callouts appear throughout (e.g., monetization model unconfirmed, rating/reviews unknown). UA channel recommendations are framed as 'once monetization confirmed' rather than stated as actuals. No KPI targets are invented."
+    }
+  ]
+}

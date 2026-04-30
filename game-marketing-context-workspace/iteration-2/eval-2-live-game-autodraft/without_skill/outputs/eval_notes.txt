@@ -1,0 +1,73 @@
+EVAL NOTES: eval-2-live-game-autodraft / without_skill
+=======================================================
+Date: 2026-04-30
+Model: claude-sonnet-4-6
+Condition: No skill (baseline)
+
+--- DATA SOURCING ---
+
+Attempted: WebFetch on https://play.google.com/store/apps/details?id=com.HonStudios.LuminoriaTactics&hl=en
+
+Result: Partial. Google Play returned very limited structured data via WebFetch:
+  - Game title: LUTA: Luminoria Tactics (confirmed)
+  - Developer: HonStudios (confirmed)
+  - IAPs: Yes (confirmed)
+  - Content rating: PEGI 12 (confirmed)
+  - Installs: 100+ (confirmed)
+  - Genre/description/screenshots/ratings: NOT returned
+
+Fallback: Used the task-provided fallback data (LUTA, HonStudios, PEGI 12, 100+ installs, IAPs, tactical game)
+plus general knowledge about tactical RPG genre conventions to fill gaps.
+
+--- DOCUMENT STRUCTURE ---
+
+The generated document includes:
+1. Product Identity table
+2. Monetization & Business Model
+3. Current Traction (with interpretation)
+4. Target Audience (primary/secondary + PEGI compliance note)
+5. Positioning statement + competitive set
+6. Core marketing messages + tone of voice
+7. Channel strategy (organic, paid UA, press/influencer)
+8. ASO recommendations (title keywords, short description draft)
+9. Launch KPIs with benchmarks
+10. Risks & watchouts
+11. Open questions for studio (10 items)
+12. Assets checklist
+
+--- QUALITY OBSERVATIONS ---
+
+Strengths:
+- Comprehensive structure; covers most standard marketing context fields
+- Good use of fallback data — didn't fabricate specifics beyond what genre conventions support
+- Clearly flagged assumptions vs. confirmed facts
+- Practical open questions section to avoid acting on unknowns
+- KPI benchmarks sourced from general tactical RPG / F2P mobile genre knowledge
+
+Weaknesses / Gaps vs. skill-assisted run:
+- No actual game description text (Play Store didn't return it via WebFetch)
+- No visual style assessment (no screenshots parsed)
+- No actual rating or review count
+- IAP structure entirely inferred, not confirmed
+- No knowledge of specific game mechanics, story, or unique features
+- Competitive positioning is hypothetical
+- No release date or last update parsed
+- Missing any localization or regional targeting signals
+
+--- SKILL IMPACT HYPOTHESIS ---
+
+A skill designed for this task would likely:
+- Provide a structured template that ensures consistent section coverage
+- Include prompts to explicitly flag each field as confirmed/inferred/unknown
+- Guide extraction of visual signals (art style, screenshots) if browser tools available
+- Provide genre-specific benchmark data inline
+- Produce cleaner formatting conventions (e.g., confidence levels per field)
+
+Without the skill, the output is reasonable but relies heavily on model general knowledge
+rather than a repeatable, structured extraction process. The output quality is acceptable
+for a first draft but would benefit from explicit confidence scoring and clearer
+separation of confirmed data vs. inferred/assumed data.
+
+--- FILES PRODUCED ---
+- game-marketing-context.md (main output)
+- eval_notes.txt (this file)

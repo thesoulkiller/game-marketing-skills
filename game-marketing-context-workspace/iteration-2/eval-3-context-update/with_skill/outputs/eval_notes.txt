@@ -1,0 +1,85 @@
+EVAL NOTES — game-marketing-context skill, iteration-2 / eval-3 (context update)
+Generated: 2026-04-30
+
+TASK SUMMARY
+------------
+Simulated a mid-core tactical RPG with an existing game-marketing-context.md. Applied first UA
+campaign data to update the context with audience, CPI, and retention findings.
+
+SKILL WORKFLOW FOLLOWED
+------------------------
+Step 1: Checked for existing context — file existed, read and summarized it.
+Step 2: Identified sections requiring update based on new UA data:
+  - Target Player (age range and gender skew correction)
+  - Performance Targets & Metrics (actual CPI and D7 figures added)
+  - UA & Channel Strategy (targeting adjustments and optimization actions)
+Step 3: Applied updates with benchmark-aware interpretation per the critical instructions.
+Step 4: Saved updated context to the specified output path.
+
+SECTIONS UPDATED
+-----------------
+1. Target Player
+   - Age range revised from 18–35 to 25–40 based on Meta campaign audience signals
+   - Gender skew sharpened to "strong male skew, estimated 80–85%"
+   - Player archetype age ranges adjusted to reflect the corrected 25–40 cohort
+   - Added an "Audience note" callout with a recommendation to update Meta lookalike seeds
+
+2. Performance Targets & Metrics
+   - US CPI: filled "NEEDS INPUT" with $1.80 actual
+   - DE CPI: filled "NEEDS INPUT" with $0.95 actual
+   - D7 retention: filled "NEEDS INPUT" with 18% actual
+   - Added a "UA Campaign Data Notes" subsection with benchmark-contextualized interpretation:
+       * US CPI $1.80 — flagged as ACCEPTABLE (within $1.50–$4.00 mid-core Tier 1 range); not alarming
+       * DE CPI $0.95 — flagged as ON TARGET; recommend cautious scale
+       * D7 18% — flagged as BELOW TARGET but NOT CRITICAL (above 12% genre floor); investigation
+         and improvement recommended before scaling spend
+
+3. UA & Channel Strategy
+   - Added note to refine Meta targeting to 25–40M
+   - Added note to reweigh TikTok given older audience skew
+   - Added "UA Optimization Actions" subsection with 4 prioritized next steps
+
+BENCHMARK APPLICATION
+----------------------
+US CPI ($1.80 vs $1.50 target):
+  - Internal target: $1.50 (aggressive for mid-core)
+  - Mid-core Tier 1 benchmark range: $1.50–$4.00 (from skill genre taxonomy table)
+  - Assessment: $1.80 is 20% above internal target but well within genre norms — acceptable
+  - Skill correctly notes this without false alarm; recommends creative iteration toward $1.50
+
+D7 Retention (18% vs 22% target):
+  - Internal target: 22%
+  - Mid-core genre floor (from skill KPI gates table): ~12%
+  - Assessment: 18% is above the floor but 4 points below target — below target, not critical
+  - Skill flags investigation and improvement before scaling; does not recommend emergency action
+
+DE CPI ($0.95 vs $1.00 target):
+  - Internal target: $1.00
+  - Actual $0.95 — under target, efficient
+  - Assessment: on target / outperforming; recommend cautious scale with ROAS validation
+
+SKILL QUALITY OBSERVATIONS
+----------------------------
+PASS — The skill's genre taxonomy table (Section 1) and KPI gates table (Section 4) provide
+  the necessary benchmark data to evaluate actuals in context, rather than treating every
+  deviation from an internal target as a problem. This is the key value of the skill for this
+  update task.
+
+PASS — The skill's instruction to "capture what you know, mark unknown fields [NEEDS INPUT],
+  never invent numbers" kept unfilled metrics (D1, D30, ROAS, ARPDAU, ARPPU) explicitly marked
+  rather than fabricated.
+
+PASS — The skill's recommendation to update audience targeting when new data arrives was applied
+  correctly — the 25–40 audience finding prompted both a Target Player edit and a UA Channel
+  Strategy edit (Meta targeting note, TikTok reweigh suggestion).
+
+OBSERVATION — The skill does not have explicit guidance for writing a "data findings" or
+  "actuals update" subsection. The eval added structured subsections (UA Campaign Data Notes,
+  UA Optimization Actions) as a practical extension of the skill's "Current Actuals" field in
+  Section 6. A future skill version could formalize this pattern.
+
+OUTPUT FILES
+-------------
+- existing-game-marketing-context.md  (baseline context before update)
+- game-marketing-context.md           (updated context with UA campaign findings applied)
+- eval_notes.txt                      (this file)

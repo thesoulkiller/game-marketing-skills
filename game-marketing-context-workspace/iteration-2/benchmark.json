@@ -1,0 +1,413 @@
+{
+  "metadata": {
+    "skill_name": "game-marketing-context",
+    "skill_path": "<path/to/skill>",
+    "executor_model": "<model-name>",
+    "analyzer_model": "<model-name>",
+    "timestamp": "2026-04-30T12:47:13Z",
+    "evals_run": [
+      1,
+      2,
+      3
+    ],
+    "runs_per_configuration": 3
+  },
+  "runs": [
+    {
+      "eval_id": 1,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 9,
+        "failed": 0,
+        "total": 9,
+        "time_seconds": 178.2,
+        "tokens": 38219,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Core loop uses the action\u2192reward\u2192progression\u2192loop structure, not just a vague description",
+          "passed": true,
+          "evidence": "Core loop explicitly structured as: puzzle battle (action) \u2192 earns resources/currency (reward) \u2192 constructs/upgrades kingdom structures (progression) \u2192 new structures unlock next puzzle battle tier (loop). Quoted: 'Player enters a puzzle battle \u2192 solves a match-3 or logic puzzle in 60\u201390 seconds \u2192 earns building resources and currency \u2192 spends them to construct or upgrade kingdom structures \u2192 new structures unlock the next puzzle battle tier, repeating every 3\u20135 minutes.'"
+        },
+        {
+          "text": "Genre is classified using the taxonomy table with session length referenced",
+          "passed": true,
+          "evidence": "A 'Genre benchmark reference' table is present with columns: Genre, Session (session lengths listed as '5\u201315 min, 3\u20136x/day' for casual and '15\u201330 min, 2\u20134x/day' for mid-core), D1 target, and CPI (US). Session length is explicitly included in the table."
+        },
+        {
+          "text": "Genre-appropriate D1 retention target is present (35\u201345% for casual, 25\u201335% for mid-core) \u2014 not a made-up number outside these ranges",
+          "passed": true,
+          "evidence": "Taxonomy table shows D1 target of 35\u201345% for casual and 25\u201335% for mid-core, exactly matching the specified ranges. KPI gates table uses \u2265 35% for the hybrid game with rationale 'Mid-point of casual (40%) and mid-core (25%) benchmarks'."
+        },
+        {
+          "text": "Genre-appropriate CPI benchmark range is referenced (e.g., $1.00\u20132.50 for casual or $1.50\u20134.00 for mid-core US)",
+          "passed": true,
+          "evidence": "Taxonomy table lists CPI (US) as $1.00\u20132.50 for casual and $1.50\u20134.00 for mid-core, exactly matching the specified benchmark ranges."
+        },
+        {
+          "text": "Soft launch market selection includes CA, AU, or NZ with at least one reason why (English-speaking, iOS-heavy, or GDPR-free)",
+          "passed": true,
+          "evidence": "Soft launch regions are Canada, Australia, New Zealand. Reasons given include: English-speaking (like the US highest-LTV market), iOS-heavy (reliable iOS funnel data), and Outside GDPR (CA/AU/NZ \u2014 less consent friction, cleaner attribution signal)."
+        },
+        {
+          "text": "UA channel list uses current network names: Unity LevelPlay (not IronSource) and Liftoff (not Vungle)",
+          "passed": true,
+          "evidence": "UA channel list includes 'Unity LevelPlay (formerly IronSource \u2014 merged 2023)' and 'Liftoff (formerly Vungle \u2014 rebranded 2023)'. Both current names are used correctly."
+        },
+        {
+          "text": "Attribution tool field is present and flagged as required before paid UA",
+          "passed": true,
+          "evidence": "Two instances: Line 146 'Attribution tool: [NEEDS INPUT] \u2014 must be selected and integrated before any paid UA spend. Recommended options: AppsFlyer, Adjust, or Singular. This is a hard blocker for launching UA campaigns.' Also repeated in UA section: 'Attribution tool: [NEEDS INPUT] \u2014 required before any paid spend. Without MMP integration, campaign performance is unmeasurable. Set this up first.'"
+        },
+        {
+          "text": "Monetization philosophy field is present (whale-friendly / soft monetization / balanced)",
+          "passed": true,
+          "evidence": "Monetization philosophy field present: 'Broad payer base (soft monetization) \u2014 maximize conversion at low price points, with a secondary mid-tier spender layer via bundles and battle pass. Avoid mechanics that read as pay-to-win, which alienates the casual-puzzle segment.'"
+        },
+        {
+          "text": "Fabricated KPI numbers are explicitly flagged as assumptions or genre benchmarks, not stated as facts",
+          "passed": true,
+          "evidence": "Document opens with 'All assumed values are marked with *(assumed)*.' Every KPI in the performance targets table is marked '*(assumed)*' or '*(assumed genre midpoint)*'. Footer note reads: 'All targets marked *(assumed)* are genre-benchmark-derived starting points for a casual-to-mid-core F2P hybrid. Validate against studio targets and update before soft launch.'"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 8,
+        "failed": 0,
+        "total": 8,
+        "time_seconds": 152.3,
+        "tokens": 32573,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Game title correctly identified as LUTA: Luminoria Tactics or Luminoria Tactics",
+          "passed": true,
+          "evidence": "Line 11: '**Title:** LUTA: Luminoria Tactics' \u2014 exact match to full game title."
+        },
+        {
+          "text": "Genre classified as mid-core or tactical/strategy with session length benchmark referenced (15\u201330 min)",
+          "passed": true,
+          "evidence": "Line 13: 'Strategy / Tactical RPG (mid-core)'. Line 33: '[ASSUMPTION] 15\u201330 min sessions, 1\u20133x per day' \u2014 session length benchmark present."
+        },
+        {
+          "text": "Mid-core D1 retention benchmark referenced (25\u201335%), NOT the casual range (35\u201345%)",
+          "passed": true,
+          "evidence": "Line 104: 'D1 retention | \u2265 25% [ASSUMPTION \u2014 mid-core benchmark]' \u2014 uses mid-core floor of 25%, not the casual range of 35\u201345%."
+        },
+        {
+          "text": "Core loop is written using the action\u2192reward\u2192progression\u2192loop structure, even if flagged as assumption",
+          "passed": true,
+          "evidence": "Line 15: 'Player deploys units on a tactical grid \u2192 executes turn-based combat against enemy waves \u2192 earns XP and loot \u2192 upgrades heroes/units \u2192 which unlocks harder missions and new tactical options, repeating every 10\u201320 minutes.' Explicit arrow-chain structure and flagged [ASSUMPTION]."
+        },
+        {
+          "text": "ROAS targets include a time window (D7, D30, or D90) \u2014 not just 'good ROAS'",
+          "passed": true,
+          "evidence": "Lines 107\u2013109 list D7 ROAS (\u226510%), D30 ROAS (\u226530\u201340%), and D90 ROAS (\u226580\u2013100%) as distinct rows. Line 113 further explains D7/D30/D90 payback windows."
+        },
+        {
+          "text": "iOS measurement section mentions ATT, SKAdNetwork, or the ~25\u201335% opt-in rate limitation",
+          "passed": true,
+          "evidence": "Line 117: 'ATT opt-in rate averages 25\u201335%; expect SKAdNetwork (SKAN) aggregated, delayed, non-user-level data for the majority of iOS installs.' All three elements present."
+        },
+        {
+          "text": "UA channels do not list IronSource as a standalone network or Vungle (outdated names)",
+          "passed": true,
+          "evidence": "Line 138 lists 'Unity LevelPlay (formerly IronSource \u2014 merged 2023)' and 'Liftoff (formerly Vungle \u2014 rebranded 2023)' \u2014 current brand names used as primary labels; legacy names appear only as historical parentheticals, not as standalone network names."
+        },
+        {
+          "text": "All unknown KPIs are marked [NEEDS INPUT] or [ASSUMPTION] \u2014 not fabricated as facts",
+          "passed": true,
+          "evidence": "All unknown values throughout the document consistently use [NEEDS INPUT] or [ASSUMPTION] tags (e.g., ARPDAU, ARPPU, store rating, IAP price points, competitor details). No KPI values are stated as confirmed facts without a source or explicit tag."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "with_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 7,
+        "failed": 0,
+        "total": 7,
+        "time_seconds": 128.1,
+        "tokens": 32254,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Reads existing context file before making changes (updated file differs from existing file)",
+          "passed": true,
+          "evidence": "The updated file clearly differs from the existing file (date updated from 2026-03-15 to 2026-04-30, CPI actuals filled in, D7 retention filled in, age range revised, new subsections added). eval_notes.txt confirms Step 1 was 'Checked for existing context \u2014 file existed, read and summarized it.'"
+        },
+        {
+          "text": "Updates CPI actuals: US $1.80 and Germany $0.95 with source noted",
+          "passed": true,
+          "evidence": "Performance Targets table updated: CPI (Tier 1, US) Current = '$1.80 (Meta \u2014 see note)'; CPI (Tier 2, DE) Current = '$0.95 (Meta \u2014 on target)'. Both values present with 'Meta' as the data source."
+        },
+        {
+          "text": "D7 retention actual (18%) is compared against the genre benchmark floor (e.g., ~12% for mid-core), not just flagged as 'below target'",
+          "passed": true,
+          "evidence": "UA Campaign Data Notes section states: 'The mid-core genre floor is approximately 12% \u2014 so 18% is above the critical threshold and not an emergency.' The 18% actual is explicitly benchmarked against the ~12% genre floor rather than simply flagged as below the 22% internal target."
+        },
+        {
+          "text": "US CPI $1.80 is evaluated against genre-appropriate CPI benchmark range (acceptable for mid-core $1.50\u20134.00; above range for casual $1.00\u20132.50)",
+          "passed": true,
+          "evidence": "UA Campaign Data Notes section states: '$1.80 is within the mid-core Tier 1 benchmark range of $1.50\u2013$4.00. This is not alarming \u2014 it reflects healthy competitive demand for this audience.' The mid-core genre benchmark range is correctly applied. The casual range comparison ($1.00\u20132.50) is not explicitly mentioned, but the mid-core genre-appropriate range is correctly cited and the evaluation is accurate."
+        },
+        {
+          "text": "Target player age range updated to 25-40 with data source noted",
+          "passed": true,
+          "evidence": "Target Player section updated to: 'Primary age range: 25\u201340 *(updated from 18\u201335 based on first UA campaign data \u2014 actual audience skews older and more male than originally estimated)*'. Data source ('first UA campaign data') is explicitly noted inline."
+        },
+        {
+          "text": "Unrelated sections (monetization, store presence, brand voice) are not rewritten",
+          "passed": true,
+          "evidence": "Comparing both files: Monetization Model section is identical, Store Presence section is identical, and Brand Voice & Tone section is identical. Only Target Player, Performance Targets & Metrics, and UA & Channel Strategy sections were modified."
+        },
+        {
+          "text": "Summary of changes is provided",
+          "passed": true,
+          "evidence": "eval_notes.txt contains a 'SECTIONS UPDATED' section listing all three modified sections with detailed descriptions of each change made. This serves as the summary of changes for the run."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 1,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.22,
+        "passed": 2,
+        "failed": 7,
+        "total": 9,
+        "time_seconds": 103.2,
+        "tokens": 23424,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Core loop uses the action\u2192reward\u2192progression\u2192loop structure, not just a vague description",
+          "passed": false,
+          "evidence": "Core loop is stated as 'Complete puzzle battles \u2192 earn resources \u2192 grow kingdom' \u2014 a 3-part chain (action\u2192reward\u2192progression) without a closing loop step that returns the player back to the start. The fourth element (\u2192loop) is absent."
+        },
+        {
+          "text": "Genre is classified using the taxonomy table with session length referenced",
+          "passed": false,
+          "evidence": "Genre is listed as 'Fantasy City-Builder / Puzzle RPG' in the Product Overview section. No taxonomy table is present in the document. Session length (5\u201320 min) appears only in the Target Audience psychographics, not linked to genre classification."
+        },
+        {
+          "text": "Genre-appropriate D1 retention target is present (35\u201345% for casual, 25\u201335% for mid-core) \u2014 not a made-up number outside these ranges",
+          "passed": true,
+          "evidence": "D1 Retention target listed as '>40%' in the Key Metrics table. This falls within the 35\u201345% casual genre range."
+        },
+        {
+          "text": "Genre-appropriate CPI benchmark range is referenced (e.g., $1.00\u20132.50 for casual or $1.50\u20134.00 for mid-core US)",
+          "passed": false,
+          "evidence": "CPI is listed as '<$1.50 Tier 2, <$3 Tier 1' \u2014 these are upper-bound targets, not benchmark ranges. No explicit range like $1.00\u20132.50 or $1.50\u20134.00 is cited, and the values are framed as soft launch goals rather than genre benchmarks."
+        },
+        {
+          "text": "Soft launch market selection includes CA, AU, or NZ with at least one reason why (English-speaking, iOS-heavy, or GDPR-free)",
+          "passed": false,
+          "evidence": "Soft launch markets listed as 'Canada, Australia, Philippines assumed' (line 67), which includes CA and AU. However, no reason is given for these selections. The Assumptions section only labels them 'Tier 2' with no rationale such as English-speaking, iOS-heavy, or GDPR-free."
+        },
+        {
+          "text": "UA channel list uses current network names: Unity LevelPlay (not IronSource) and Liftoff (not Vungle)",
+          "passed": false,
+          "evidence": "Line 95 lists 'AppLovin MAX, ironSource, Unity Ads' and line 74 also uses 'ironSource'. Both references use the outdated 'ironSource' name instead of 'Unity LevelPlay'. 'Unity Ads' is used instead of 'Unity LevelPlay'. Liftoff is not mentioned anywhere in the document."
+        },
+        {
+          "text": "Attribution tool field is present and flagged as required before paid UA",
+          "passed": false,
+          "evidence": "Attribution tools are mentioned in Next Steps item 8: 'Set up analytics (Adjust or AppsFlyer for attribution, Firebase for in-game)'. There is no dedicated attribution field, and it is not explicitly flagged as required before paid UA \u2014 it appears as one of ten next steps without prioritization or a warning."
+        },
+        {
+          "text": "Monetization philosophy field is present (whale-friendly / soft monetization / balanced)",
+          "passed": false,
+          "evidence": "Monetization is described as 'Assumed \u2014 IAP (gems/currency), battle passes, cosmetic bundles, energy refills'. This lists mechanics only. No monetization philosophy classification (whale-friendly, soft monetization, or balanced) is present anywhere in the document."
+        },
+        {
+          "text": "Fabricated KPI numbers are explicitly flagged as assumptions or genre benchmarks, not stated as facts",
+          "passed": true,
+          "evidence": "The Key Metrics table column is labeled 'Target (Assumed)' and there is a dedicated 'Assumptions Made' section. KPI targets are consistently qualified with 'Assumed' or 'TBD', making clear they are not stated as facts."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 2,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.25,
+        "passed": 2,
+        "failed": 6,
+        "total": 8,
+        "time_seconds": 111.5,
+        "tokens": 25135,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Game title correctly identified as LUTA: Luminoria Tactics or Luminoria Tactics",
+          "passed": true,
+          "evidence": "Document header and Product Identity table both list 'LUTA: Luminoria Tactics' exactly."
+        },
+        {
+          "text": "Genre classified as mid-core or tactical/strategy with session length benchmark referenced (15\u201330 min)",
+          "passed": false,
+          "evidence": "Genre is correctly 'Tactical / Strategy RPG', but session length is listed as '10\u201330 min' (line 57), not the 15\u201330 min mid-core benchmark. Lower bound is off by 5 minutes."
+        },
+        {
+          "text": "Mid-core D1 retention benchmark referenced (25\u201335%), NOT the casual range (35\u201345%)",
+          "passed": false,
+          "evidence": "KPI table (line 160) lists Day-1 Retention as '35\u201345%' labelled 'Benchmark for tactical RPG genre' \u2014 this is the casual game range, not the correct mid-core range of 25\u201335%."
+        },
+        {
+          "text": "Core loop is written using the action\u2192reward\u2192progression\u2192loop structure, even if flagged as assumption",
+          "passed": false,
+          "evidence": "No core loop section exists in the document. Section 11 lists 'What is the core game loop?' as an open question for the studio, meaning it was never drafted."
+        },
+        {
+          "text": "ROAS targets include a time window (D7, D30, or D90) \u2014 not just 'good ROAS'",
+          "passed": false,
+          "evidence": "No ROAS targets appear anywhere in the document. The KPI table covers installs, rating, retention, and IAP conversion only \u2014 ROAS is entirely absent."
+        },
+        {
+          "text": "iOS measurement section mentions ATT, SKAdNetwork, or the ~25\u201335% opt-in rate limitation",
+          "passed": false,
+          "evidence": "The document is scoped entirely to Android/Google Play. There is no iOS measurement section and no mention of ATT, SKAdNetwork, or opt-in rates anywhere."
+        },
+        {
+          "text": "UA channels do not list IronSource as a standalone network or Vungle (outdated names)",
+          "passed": true,
+          "evidence": "Paid UA channels listed are 'Google UAC (primary), Meta Ads (secondary), TikTok Ads' (line 123). IronSource and Vungle do not appear anywhere in the document."
+        },
+        {
+          "text": "All unknown KPIs are marked [NEEDS INPUT] or [ASSUMPTION] \u2014 not fabricated as facts",
+          "passed": false,
+          "evidence": "KPI table states D1 Retention '35\u201345%' and D7 Retention '15\u201325%' as plain benchmark figures with no [NEEDS INPUT] or [ASSUMPTION] tags. These are unknown for this specific game and should be flagged. Other fields use informal qualifiers like 'confirm with studio' but the KPI table itself contains no structured uncertainty markers."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": 3,
+      "configuration": "without_skill",
+      "run_number": 1,
+      "result": {
+        "pass_rate": 0.71,
+        "passed": 5,
+        "failed": 2,
+        "total": 7,
+        "time_seconds": 85.5,
+        "tokens": 23270,
+        "tool_calls": 0,
+        "errors": 0
+      },
+      "expectations": [
+        {
+          "text": "Reads existing context file before making changes (updated file differs from existing file)",
+          "passed": true,
+          "evidence": "The updated file is substantially different from the existing file \u2014 it adds a timestamp header, expands the UA table with actuals/delta/status columns, adds CPI and retention analysis sections, updates attribution tracking events, reformats the channels table, adds next steps and revision history. The changes are clearly derived from reading the original."
+        },
+        {
+          "text": "Updates CPI actuals: US $1.80 and Germany $0.95 with source noted",
+          "passed": true,
+          "evidence": "UA table row shows 'CPI (US) | $1.50 | $1.80' and 'CPI (DE) | $1.00 | $0.95' under the 'Actual (Wave 1)' column. Source is attributed to 'Post first UA campaign data (Meta, Wave 1)' in the file header and Wave 1 column label."
+        },
+        {
+          "text": "D7 retention actual (18%) is compared against the genre benchmark floor (e.g., ~12% for mid-core), not just flagged as 'below target'",
+          "passed": false,
+          "evidence": "Retention analysis states 'D7 at 18% is 4 percentage points below the 22% target' \u2014 this only compares against the internal target. No genre benchmark floor (e.g., ~12% for mid-core) is mentioned anywhere in the updated file."
+        },
+        {
+          "text": "US CPI $1.80 is evaluated against genre-appropriate CPI benchmark range (acceptable for mid-core $1.50\u20134.00; above range for casual $1.00\u20132.50)",
+          "passed": false,
+          "evidence": "CPI analysis says '$1.80 actual vs. $1.50 target \u2014 20% above benchmark' \u2014 the word 'benchmark' here refers to the internal target, not a genre CPI benchmark range. No mid-core CPI range (e.g., $1.50\u2013$4.00) or casual CPI range comparison is provided."
+        },
+        {
+          "text": "Target player age range updated to 25-40 with data source noted",
+          "passed": true,
+          "evidence": "Updated audience section shows 'Age Range: 25\u201340 \u2190 revised upward based on Meta campaign demographic breakdown'. Source is explicitly noted as Meta campaign data."
+        },
+        {
+          "text": "Unrelated sections (monetization, store presence, brand voice) are not rewritten",
+          "passed": true,
+          "evidence": "Neither the existing nor updated file contains monetization, store presence, or brand voice sections. The updated file only modifies sections directly relevant to the new campaign data (UA targets, audience, attribution, channels, creative strategy). No new unrelated sections were introduced."
+        },
+        {
+          "text": "Summary of changes is provided",
+          "passed": true,
+          "evidence": "A 'Revision History' table is present at the end of the updated file, documenting on 2026-04-30: 'Updated audience to 25\u201340 male; added Wave 1 CPI actuals (US $1.80, DE $0.95); recorded D7 retention at 18% vs 22% target; added next steps'."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "stddev": 0.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 152.8667,
+        "stddev": 25.0548,
+        "min": 128.1,
+        "max": 178.2
+      },
+      "tokens": {
+        "mean": 34348.6667,
+        "stddev": 3355.5998,
+        "min": 32254,
+        "max": 38219
+      }
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.3933,
+        "stddev": 0.2747,
+        "min": 0.22,
+        "max": 0.71
+      },
+      "time_seconds": {
+        "mean": 100.0667,
+        "stddev": 13.2802,
+        "min": 85.5,
+        "max": 111.5
+      },
+      "tokens": {
+        "mean": 23943.0,
+        "stddev": 1035.17,
+        "min": 23270,
+        "max": 25135
+      }
+    },
+    "delta": {
+      "pass_rate": "+0.61",
+      "time_seconds": "+52.8",
+      "tokens": "+10406"
+    }
+  },
+  "notes": []
+}

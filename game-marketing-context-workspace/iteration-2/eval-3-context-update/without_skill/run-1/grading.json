@@ -1,0 +1,46 @@
+{
+  "run_id": "eval-3-without_skill",
+  "expectations": [
+    {
+      "text": "Reads existing context file before making changes (updated file differs from existing file)",
+      "passed": true,
+      "evidence": "The updated file is substantially different from the existing file — it adds a timestamp header, expands the UA table with actuals/delta/status columns, adds CPI and retention analysis sections, updates attribution tracking events, reformats the channels table, adds next steps and revision history. The changes are clearly derived from reading the original."
+    },
+    {
+      "text": "Updates CPI actuals: US $1.80 and Germany $0.95 with source noted",
+      "passed": true,
+      "evidence": "UA table row shows 'CPI (US) | $1.50 | $1.80' and 'CPI (DE) | $1.00 | $0.95' under the 'Actual (Wave 1)' column. Source is attributed to 'Post first UA campaign data (Meta, Wave 1)' in the file header and Wave 1 column label."
+    },
+    {
+      "text": "D7 retention actual (18%) is compared against the genre benchmark floor (e.g., ~12% for mid-core), not just flagged as 'below target'",
+      "passed": false,
+      "evidence": "Retention analysis states 'D7 at 18% is 4 percentage points below the 22% target' — this only compares against the internal target. No genre benchmark floor (e.g., ~12% for mid-core) is mentioned anywhere in the updated file."
+    },
+    {
+      "text": "US CPI $1.80 is evaluated against genre-appropriate CPI benchmark range (acceptable for mid-core $1.50–4.00; above range for casual $1.00–2.50)",
+      "passed": false,
+      "evidence": "CPI analysis says '$1.80 actual vs. $1.50 target — 20% above benchmark' — the word 'benchmark' here refers to the internal target, not a genre CPI benchmark range. No mid-core CPI range (e.g., $1.50–$4.00) or casual CPI range comparison is provided."
+    },
+    {
+      "text": "Target player age range updated to 25-40 with data source noted",
+      "passed": true,
+      "evidence": "Updated audience section shows 'Age Range: 25–40 ← revised upward based on Meta campaign demographic breakdown'. Source is explicitly noted as Meta campaign data."
+    },
+    {
+      "text": "Unrelated sections (monetization, store presence, brand voice) are not rewritten",
+      "passed": true,
+      "evidence": "Neither the existing nor updated file contains monetization, store presence, or brand voice sections. The updated file only modifies sections directly relevant to the new campaign data (UA targets, audience, attribution, channels, creative strategy). No new unrelated sections were introduced."
+    },
+    {
+      "text": "Summary of changes is provided",
+      "passed": true,
+      "evidence": "A 'Revision History' table is present at the end of the updated file, documenting on 2026-04-30: 'Updated audience to 25–40 male; added Wave 1 CPI actuals (US $1.80, DE $0.95); recorded D7 retention at 18% vs 22% target; added next steps'."
+    }
+  ],
+  "summary": {
+    "pass_rate": 0.71,
+    "passed": 5,
+    "failed": 2,
+    "total": 7
+  }
+}

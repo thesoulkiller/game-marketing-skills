@@ -1,0 +1,132 @@
+EVAL NOTES — game-marketing-context skill
+Eval: eval-2-live-game-autodraft / with_skill
+Date: 2026-04-30
+Skill version: 1.1.0
+Game: LUTA: Luminoria Tactics (com.HonStudios.LuminoriaTactics)
+Task: Auto-draft game-marketing-context.md from live Google Play listing
+
+===========================================================================
+1. DATA EXTRACTION — WEBFETCH RESULT
+===========================================================================
+
+WebFetch was attempted on the Google Play URL:
+  https://play.google.com/store/apps/details?id=com.HonStudios.LuminoriaTactics&hl=en
+
+Result: PARTIAL — Google Play is heavily client-side rendered (React/JS). WebFetch
+successfully returned:
+  - Game title: LUTA: Luminoria Tactics (confirmed)
+  - Developer: HonStudios (confirmed)
+  - Platform: Android / Google Play (confirmed)
+  - Content rating: PEGI 12 (confirmed)
+  - Installs: 100+ (confirmed)
+  - Monetization type: In-app purchases present (confirmed)
+  - Genre signal: "Tactics" in title → tactical/strategy (inferred)
+
+NOT returned by WebFetch (client-side rendering limitation):
+  - Full game description text
+  - Star rating and review count
+  - Screenshots or visual style indicators
+  - App size and last update date
+  - IAP price points or specific IAP names
+  - Any press/awards/featured banners
+
+Fallback used: Known data from task brief + genre convention inference.
+All inferred fields clearly marked [ASSUMPTION] or [NEEDS INPUT].
+
+===========================================================================
+2. SKILL COMPLIANCE CHECKS
+===========================================================================
+
+[PASS] Core loop template applied
+  - Used the prescribed template: "Player [action] → earns [resource] → uses to
+    [progress] → unlocks [next challenge], repeating every [X minutes]"
+  - Marked as [ASSUMPTION — inferred from genre], not presented as fact
+  - Included follow-up prompt for team to confirm turn-based vs real-time,
+    hero collection vs unit-type system
+
+[PASS] UA network names are current
+  - Used: Unity LevelPlay (not IronSource)
+  - Used: Liftoff (not Vungle)
+  - Parenthetical notes explain the 2023 rebrands for context
+  - All other networks use current names: Meta, TikTok Ads, Google UAC,
+    AppLovin/MAX, Moloco, Mintegral, Apple Search Ads
+
+[PASS] ATT/SKAdNetwork iOS measurement note included
+  - Section: Performance Targets & Metrics — attribution note
+  - Section: UA & Channel Strategy — iOS measurement approach
+  - ATT opt-in rate cited as 25–35% (matches skill spec)
+  - SKAN limitations called out explicitly (aggregated, delayed, non-user-level)
+  - Recommendation: do not promise iOS ROAS accuracy at user level
+
+[PASS] ROAS targets include time windows
+  - D7 ROAS target specified (10% — mid-core benchmark, flagged as assumption)
+  - D30 ROAS target specified (30–40% — flagged as assumption)
+  - D90 ROAS target specified (80–100% — flagged as break-even window)
+  - Note added: F2P games rarely break even before D90; do not pause on D7 alone
+
+[PASS] Unknown KPIs marked [NEEDS INPUT]
+  - All unconfirmed metrics use [NEEDS INPUT] consistently
+  - Assumptions (genre benchmarks used as placeholders) use [ASSUMPTION] tag
+  - Two distinct tags used to differentiate "we don't know" vs "educated guess"
+
+[PASS] Genre classification applied with benchmarks
+  - Classified as Mid-core / Strategy / Tactical RPG
+  - Genre benchmark table applied for D1/D7/D30 retention and CPI ranges
+  - Session length and frequency noted (15–30 min, 1–3x/day)
+
+[PASS] Attribution tool flagged as blocker
+  - Called out in Performance Targets section
+  - Called out again in UA & Channel Strategy section
+  - Marked as CRITICAL blocker before scaling paid UA
+
+[PASS] Launch status correctly applied
+  - Global launch (as specified by user)
+  - KPI gates section updated to reflect "N/A for global — focus on scaling"
+  - Upcoming milestones section preserved for live ops planning
+
+[PASS] [NEEDS INPUT] used for all unknown KPIs
+  - ARPDAU, ARPPU, actual retention, actual CPI, store rating, review count,
+    iOS URL, attribution tool, brand voice, creative actuals all marked correctly
+
+===========================================================================
+3. QUALITY OBSERVATIONS
+===========================================================================
+
+STRENGTHS:
+- All 10 skill sections represented in the output document
+- Clear separation of confirmed data vs. inferred vs. unknown
+- "Open Questions for the Team" section added (not in skill template but
+  highly useful — prioritizes the most critical information gaps)
+- Genre benchmark table used to populate plausible KPI starting points
+- Player archetype table drafted speculatively with genre conventions
+- Competitive landscape section lists suggested competitors even though actuals
+  are unknown — gives the team something to react to rather than a blank table
+
+LIMITATIONS / GAPS:
+- No visual style information (screenshots not fetched) — art style is [NEEDS INPUT]
+- Store rating is [NEEDS INPUT] — key social proof metric missing
+- Full game description not returned — no keywords for ASO pre-work
+- 100+ installs is very low — limited actuals data available for any metric
+- iOS status unknown — if iOS is not live, several UA channel recommendations
+  (ASA, SKAN notes) are premature but included as planning items
+
+SUGGESTIONS FOR SKILL IMPROVEMENT (not blocking):
+- The skill could mention a fallback to the Google Play unofficial API
+  (gplay-api or similar) for JS-rendered pages when WebFetch is limited
+- The "Open Questions" section pattern (auto-generated prioritized gap list)
+  is useful enough to consider adding to the SKILL.md template
+
+===========================================================================
+4. OUTPUT FILE
+===========================================================================
+
+Output: game-marketing-context.md
+Location: outputs/game-marketing-context.md (same directory as this file)
+Lines: ~200
+Sections: 10 (all skill sections present)
+Confirmed fields: 7 (title, developer, platform, content rating, installs,
+                     IAP presence, Google Play URL)
+[ASSUMPTION] fields: ~8 (core loop, art style, setting, player archetypes,
+                          monetization categories, CPI/retention/ROAS targets)
+[NEEDS INPUT] fields: ~25+ (all unknown KPIs, iOS status, attribution tool,
+                             rating, brand voice, competitors, etc.)
