@@ -9,24 +9,12 @@ Phase 1 complete: `game-marketing-context` skill built, tested, and eval'd.
 
 ---
 
-## Iteration 2 — Fix `game-marketing-context` before moving on
-
-Issues found during eval that must be addressed:
-
-- [ ] Fix stale UA channel names: `IronSource` → `Unity LevelPlay`, `Vungle` → `Liftoff Monetize`
-- [ ] Add soft launch market rationale (why CA/AU/NZ: English-speaking, similar CPI to US, GDPR-light = cheap validated data before Tier 1 spend)
-- [ ] Add core loop articulation template — skill calls it "most critical field" but gives no scaffolding
-- [ ] Add genre-based CPI/retention benchmark ranges (hyper-casual D1 ~50%, casual D1 ~35–40%, mid-core D1 ~25–30% etc.)
-- [ ] Sharpen eval assertions to be discriminating — current assertions pass with or without the skill; test for skill-specific terminology (genre taxonomy labels, `[NEEDS INPUT]` discipline, launch phase table format)
-
----
-
 ## Roadmap
 
 ### Phase 1 — Foundation ✅
 | # | Skill | Status |
 |---|-------|--------|
-| 1 | `game-marketing-context` | ✅ Built & eval'd (iteration 1) |
+| 1 | `game-marketing-context` | ✅ Built & eval'd (iteration 2) — 100% with-skill vs 39% baseline |
 
 ### Phase 2 — New Skills
 | # | Skill | Status |
